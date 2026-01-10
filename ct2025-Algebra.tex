@@ -64,7 +64,6 @@ citecolor=black
 		\includegraphics[width=0.6\linewidth]{sources/comp_associativity.png}
 	\end{figure}
 	
-	\newpage
 	\section{Отображение множеств как частный случай соответствия. Инъекция и сюръекция. Обратимость отображения слева и справа. Совпадение левого и правого обратных.}
 	\subsection{Отображения}
 	\textbf{Определение:} назовем отображением соответствие $f \subset A\times B$ такое что: $\forall a \in A \ \exists ! \ b \in B: (a, b) \in f$
@@ -108,7 +107,6 @@ citecolor=black
 	\subsection{Совпадение обратного правого и обратного левого}
 	Из определений обратного правого и левого следует, что $f: A \to B$ одновременно инъективно и сюръективно, следовательно это биекция, тогда $g:B \to A$ это просто обратное отображение, которое можно также обозначить как $f^{-1}$.
 	
-	\newpage
 	\section{Определение бинарной операции, моноида, группы. Единственность нейтрального и обратного элемента. Примеры моноидов и групп.}
 	\subsection{Бинарная операция}
 	\textbf{Определение:} Бинарной операцией $\cdot$ на множестве $M$ называется отображение из $M \times M \to M$. Например умножение на $\mathbb{N}$ это бинарная операция, а вот на $\mathbb{N} \cup \{-1\}$ уже нет, так как при умножении числа на -1 мы выйдем за пределы исходного множества.
@@ -130,7 +128,6 @@ citecolor=black
 	\textbf{Доказательство:} пусть у нас есть обратные к $g$ элементы $h_1$ и $h_2$, тогда $h_1 = h_2:$  $$h_1 = h_1 \cdot (g \cdot h_2) = (h_1 \cdot g) \cdot h_2 = h_2 $$
 	что и требовалось доказать.
 	
-	\newpage
 	\section{Определение кольца. Закон нуля. Умножение на -1. Коммутативность и ассоциативность. Примеры колец.}
 	
 	\subsection{Кольцо}
@@ -151,8 +148,6 @@ citecolor=black
 		\item $(3\mathbb{Z}, +, \cdot)$ - коммутативное ассоциативное
 	\end{itemize}
 	
-	
-	\newpage
 	\section{Делимость в коммутативном кольце. Делители нуля. Область целостности. Ассоциированные элементы. Критерий ассоциированности в области целостности. Сокращение в области целостности.}
 	
 	\subsection{Делимость}
@@ -190,7 +185,6 @@ citecolor=black
 	\textbf{Утверждение:} $R$ - область целостности и $a \neq 0$, тогда $(a\cdot b = a\cdot c) \implies (b = c)$
 	\\ \textbf{Доказательство:} $a\cdot(b-c) = 0 \implies b -c = 0 \iff b = c$
 	
-	\newpage
 	\section{Алгоритм Евклида в евклидовой области. Существование НОД в
 		евклидовой области. Теорема о линейном представлении НОД в евклидовой области.}
 	
@@ -230,10 +224,6 @@ citecolor=black
 		$\forall c \in R: c | a, c | b \implies c | S_{n + 1}a \land c | T_{n + 1}b \implies c | r_{n + 1} \implies gcd(a, b) = r_{n + 1}$ 
 	\end{enumerate}
 	
-	
-	
-	
-	\newpage
 	\section{Евклидова область является областью главных идеалов.}
 	\subsection{Область главных идеалов}
 	\textbf{Определение:} область целостности $R$ - область главных идеалов, если для любого идеала $I \subseteq R$ существует такой элемент $x \in I: (x)  = I$ 
@@ -252,7 +242,6 @@ citecolor=black
 		\item правое включение: Пусть $x \in I$, разделим $x$ на $d$ с остатком: $x = dq \cdot r$, нам нужно, чтобы $r = 0$. У нас допустима ситуация, что $N(r) < N(d)$, но такая ситуация на самом деле невозможна, так как $r = x - dq \implies r \in I$, но $N(d)$ - наименьшая норма для элементов из $I$, поэтому $r$ может быть только нулем, тогда $I \subset (d)$ 
 	\end{enumerate}
 	
-	\newpage
 	\section{В области главных идеалов каждая возрастающая цепочка идеалов
 		стабилизируется.}
 	\subsection{Теорема}
@@ -266,7 +255,6 @@ citecolor=black
 	\end{enumerate}
 	Так как $I_{\infty}$ - идеал и он лежит в $R$, $\exists x \in I_{\infty}: (x) = I_{\infty}$, тогда $\exists N: x \in I_N$, но мы можем сказать, что $I_N = I_{\infty}$, тут не очевидно только левое включение: $\forall y \in I_{\infty} \implies y = sx, s \in R$, $x \in I_N \implies sx  = y \in I_N \implies I_N = I_{\infty}$, тогда начиная с $N$: $I_N = I_{N + 1} = I_{N + 2} \dots$ 
 	
-	\newpage
 	\section{В области главных идеалов необратимый элемент раскладывается
 		в произведение неприводимых.}
 	\subsection{Неприводимый элемент}
@@ -275,7 +263,6 @@ citecolor=black
 	\textbf{Утверждение:} $R$ - ОГИ, $r \in R \setminus R^{\times}$, тогда существует разложение $r$ в произведение неприводимых единственное с точностью до перестановки множителей и ассоциированности.
 	\\ \textbf{Доказательство:} Пусть у нас есть множество $S = \{(x): x -$ не раскладывается в произведение неприводимых, $ x \neq 0, x \in R\setminus R^{\times}\}$, мы предположим, что оно не пусто, по доказательству конечности цепочки вложенных идеалов мы можем взять максимальный элемент $(z)$, тогда мы можем сказать, что $z$ не может быть неприводимым, так как тогда оно будет иметь разложение на неприводимые $z = z$, что противоречит нашему множеству $S$. Тогда из этого следует, что $z$ - приводимый, тогда он имеет разложение $z = st, s,t \in R \setminus R^{\times}$, но тогда $z$ делится на $s$ или $t$, а это то же самое, что $(z) \subset (s)$ или $(z) \subset (t)$, но $(z)$ - минимальный по включению идеал в $S \implies (s), (t) \notin S$, тогда по определению множества $S$ $s$ и $t$ имеют разложение на неприводимые: $s = q_1 \cdot q_2 \dots q_n$, $t = p_1 \cdot p_2 \dots p_n$, но тогда $z = (q_1 \cdot q_2 \dots q_n) \cdot (p_1 \cdot p_2 \dots p_n)$, следовательно $z$ имеет разложение на неприводимые, получаем противоречие, следовательно $S = \varnothing$, тогда любой элемент в Области главных идеалов имеет разложение на неприводимые.
 	
-	\newpage
 	\section{Основная теорема арифметики в области главных идеалов.}
 	\subsection{Простой элемент}
 	\textbf{Определение:} элемент $r \in R \setminus{R^{\times}}$ называется простым, если из того, что $r | ab \implies r|a \lor r|b$ 
@@ -291,7 +278,6 @@ citecolor=black
 	\subsection{Единственность разложения на неприводимые}
 	Пусть $r = p_1 \cdot p_2 \dots p_n = q_1 \cdot q_2 \dots q_n$ все элементы неприводимы, а значит простые. Рассмотрим $p_1$: $p_1 | (p_1 \cdot p_2 \dots p_n), p_1 | (q_1 \cdot q_2 \dots q_m)$. $m = n$, иначе бы какие то элементы были единицами, чтобы не нарушить равенство, тогда бы нарушилось условие, что все элементы неприводимы. Затем находим среди элементов $q_i$ такой, что $p_1 \sim q_i$, меняем местами $q_i$ и $q_1$, после всех подобных перестановок получим $p_1 \sim q_1, p_2 \sim q_2, \dots, p_n \sim q_n$.
 	
-	\newpage
 	\section{Фактор-кольцо, корректность операций. Кольцо классов вычетов.
 		Обратимые элементы в \texorpdfstring{$\mathbb{Z}/n\mathbb{Z}.$}{Z/nZ}}
 	
@@ -308,7 +294,6 @@ citecolor=black
 	Обратимыми в Z/nZ являются такие $x: gcd(x, n) = 1$, это очень легко доказывается, мы можем представить линейную комбинацию для нод: $xk + yn = 1 \mod n \implies xk = 1 \mod n \implies k$ - обратимый элемент для $x$. То есть в $\mathbb{Z} / p\mathbb{Z}$ все ненулевые элементы обратимы, соответственно это уже не просто кольцо, а поле
 	
 	
-	\newpage
 	\section{Гомоморфизм колец. Проекция на фактор - гомоморфизм. Ядро
 		гомоморфизма - идеал. Образ гомоморфизма - подкольцо.}
 	\subsection{Гомоморфизм колец}
@@ -350,7 +335,6 @@ citecolor=black
 	Следовательно $Im \ f$ - подкольцо $S$.
 	
 	
-	\newpage
 	\section{Критерий инъективности гомоморфизма колец через определение
 		ядра. Гомоморфизм является изоморфизмом тттк он биекция.}
 	\subsection{Критерий инъективности}
@@ -384,7 +368,6 @@ citecolor=black
 	\end{enumerate}
 	Выходит, что $f^{-1}$ - гомоморфизм, тогда $f$ - изоморфизм.
 	
-	\newpage
 	\section{Лемма о пропуске гомоморфизма через фактор-кольцо. Теорема об
 		изоморфизме.}
 	\subsection{Лемма}
@@ -416,7 +399,6 @@ citecolor=black
 	\end{enumerate}
 	$\overline{f}$ - биекция, а значит и изоморфизм. 
 	
-	\newpage
 	\section{Китайская теорема об остатках в \texorpdfstring{$\mathbb{Z}$}{Z}.}
 	\textbf{Утверждение:} $gcd(m, n) = 1$, тогда $\sigma: \mathbb{Z}/mn\mathbb{Z} \xrightarrow{\cong} (\mathbb{Z}/n\mathbb{Z}) \times (\mathbb{Z}/m\mathbb{Z})$ \\
 	\textbf{Доказательство:} $\sigma(k) = (k \mod n, k \mod m)$ 
@@ -428,7 +410,6 @@ citecolor=black
 	\end{enumerate}
 	Определим $\ker \sigma = \{k \in \mathbb{Z}/nm\mathbb{Z}: k = 0 \mod n \land k = 0 \mod m\}$, пусть у нас $k \in \ker \sigma$, тогда $k$ делится на $m$ и $n$, тогда $k = 0 \mod nm \implies \sigma$ - инъекция. Так как у нас одинаковое количество элементов в $\mathbb{Z}/nm\mathbb{Z}$ и $\mathbb{Z}/n\mathbb{Z} \times \mathbb{Z}/m\mathbb{Z}$ и $\sigma$ - инъекция, каждый элемент слева получает уникальный справа, при этом каждый слева имеет связь, получается левое полностью покрывает правое, тогда это сюръекция и биекция соответственно. Если $\sigma$ - биекция, то мы уже ранее доказывали, что $\sigma$ - изоморфизм.
 	
-	\newpage
 	\section{Количество элементов в произведении колец. Обратимые элементы
 		в произведении колец. Мультипликативность функции Эйлера.}
 	\subsection{Произведение колец}
@@ -471,7 +452,6 @@ citecolor=black
 	\textbf{Доказательство:} так как в кольце вычетов $\mathbb{Z}/n\mathbb{Z}$ элемент $k$ обратим только когда $gcd(k, n) = 1$, мы можем сказать, что $|(\mathbb{Z}/n\mathbb{Z})^{\times}| \cong \varphi(n)$. 
 	Теперь мы можем сказать, что $\varphi(mn) = |(\mathbb{Z}/mn\mathbb{Z})^{\times}| \overset{\text{КТО}}{=} |(\mathbb{Z}/m\mathbb{Z} \times \mathbb{Z}/n\mathbb{Z})^{\times}| = |(\mathbb{Z}/m\mathbb{Z})^{\times} \times (\mathbb{Z}/n\mathbb{Z})^{\times}| = |(\mathbb{Z}/m\mathbb{Z})^{\times}| \cdot |(\mathbb{Z}/n\mathbb{Z})^{\times}| = \varphi(m) \cdot \varphi(n)$   
 	
-	\newpage
 	\section{Вычисление функции Эйлера. Теорема Эйлера.}
 	\subsection{Вычисление функции Эйлера} $\varphi(n) = \varphi(\prod p_i^k) = \prod \varphi(p_i^k)$, теперь нам надо понять как быстро считать $\varphi(p^k)$:
 	$\varphi(p) = p -1$ 
@@ -483,7 +463,6 @@ citecolor=black
 	$r_1 \cdot r_2 \dots \cdot r_{\varphi(n)} = ar_1 \cdot ar_2 \dots \cdot ar_{\varphi(n)} \mod n \implies r_1 \cdot r_2 \dots \cdot r_{\varphi(n)} =$
 	$= a^{\varphi(n)} \cdot (r_1 \cdot r_2 \dots \cdot r_{\varphi(n)}) \mod n$ , Так как у нас произведение элементов $r$ состоит из обратимых элементов мы можем сократить на него, тогда $a^{\varphi(n)} = 1 \mod n$.
 	
-	\newpage
 	\section{Построение кольца многочленов над полем, деление с остатком. Деление на двучлен. Теорема Безу. Следствие о количестве различных
 		корней многочлена.}
 	\subsection{Кольцо многочленов}
@@ -536,8 +515,6 @@ citecolor=black
 	\textbf{Утверждение:} Пусть $\deg f = n$, тогда количество различных корней $f(x) \leq n$. \\
 	\textbf{Доказательство:} Пусть $a_1, a_2, \dots a_n$ - корни $f(x)$, тогда $f(x) = g(x)(x - a_1)$, подставим $a_2$: $f(a_2) = g(a_2)(a_2 - a_1) = 0 \implies g(a_2) = 0$, тогда по первому следствию $g(x)$ можно дальше разложить так, чтобы $f(x) = g(x)(x - a_1)(x - a_2)$. таким образом мы можем разложить все корни так, что $\deg$ такого разложения будет равен количеству корней + степени оставшегося $g(x)$, что меньше чем исходный $n$, так как у нас при разложении всегда уменьшается степень $g(x)$.
 	
-	
-	\newpage
 	\section{Теорема о формальном и функциональном равенстве многочленов.
 		Антипример для конечного поля.}
 	\subsection{Характеристика}
@@ -548,7 +525,6 @@ citecolor=black
 	\textbf{Доказательство:} Возьмем $h(x) = f(x) - f(g) \in k[x]$, если у нас не формально равны, то $h \neq 0$, тогда допустим $\deg h = n$. Но тогда $h$ имеет бесконечное количество различных корней, хотя по следствию из теоремы безу он имеет только не больше $n$ различных корней - противоречие, значит $f(x) = g(x)$ \\
 	\textbf{Антипример:} если мы берем конечное поле, например $\mathbb{Z}/p\mathbb{Z}$, то в случае например многочленов $f(x) = x^p$ и $g(x) = x$ у нас они совпадают функционально, так как по малой теореме ферма $a^{p-1} = 1 \mod p \implies a^p = a \mod p$, но при этом формально они отличаются.
 	
-	\newpage
 	\section{Сумма, произведение и пересечение идеалов. Проверка. Связь произведения и пересечения в общем случае и в случае взаимно простых (комаксимальных) идеалов.}
 	\subsection{Сумма идеалов} 
 	\textbf{Определение:} $R$ - кольцо, $I, J$ - идеалы в $R$, тогда $I + J = \{i + j: i \in I, j \in J\}$ \\
@@ -587,7 +563,6 @@ citecolor=black
 		\item Пусть $a \in I\cap J$, так как $I, J$ - взаимно просты, $\exists i \in I, j \in J: 1 = j + i \implies a = ai + aj$, тогда пусть $a \in J$ для $i$ и $a \in I$ для $j$, тогда a - сумма элементов $i_k j_k$, а значит она лежит в $I\cdot J$
 	\end{enumerate}
 	
-	\newpage
 	\section{Китайская теорема об остатках для колец.}
 	\subsection{Теорема:} $I, J$ - взаимно простые идеалы в кольце $R$, тогда $R/I\cdot J \cong R/I \times R/J$ \\
 	\textbf{Доказательство:} 
@@ -606,7 +581,6 @@ citecolor=black
 	\textbf{Теорема:} Пусть $R$ - кольцо с идеалами $I_1, I_2, \dots, I_n$, все попарно взаимно просты, тогда $R/I_1 \cdot \dots \cdot I_n \cong R/I_1 \times \dots \times R/I_n$ \\
 	\textbf{Доказательство:} Берем просто пару идеалов $I = I_1$ и $J = I_2 \cdot \dots \cdot I_n$, доказываем как для двух идеалов. Но нужно показать, что $I, J$ - взаимно простые. Сделаем линейные комбинации для $I_1$ и каждого другого идеала, затем перемножим их, тогда получится $1 = (i_1 + y_2) (i_2 + y_3)\dots (i_{n-1} + y_n) = y_2y_3 \dots y_n +$ какой то элемент из идеала $I$, тут $y_i$ - элемент $I_i$ идеала. Тогда мы составили линейную комбинацию для $I$ и $J$.
 	
-	\newpage
 	\section{Формула Тейлора для многочлена. Критерий кратности корня.}
 	\subsection{Формула Тейлора для многочлена}
 	$f(x) \in k[x], f(x) = a_0 + a_1x + \dots + a_nx^n$, 
@@ -630,14 +604,12 @@ citecolor=black
 	\end{enumerate}
 	\textbf{Утверждение:} $p(x) \neq 0 \in k[x]$, $\alpha$ - корень кратности $m \iff f(\alpha) = 0, f'(\alpha) = 0, \dots f^{(m-1)}(\alpha) = 0$ и $f^{(m)}(\alpha) \neq 0$
 	
-	\newpage
 	\section{Количество корней с кратностями не больше степени многочлена.}
 	\textbf{Теорема:} $p(x) \neq 0 \in k[x], \alpha_1,\dots, \alpha_n$ - различные корни кратности $l_1, \dots, l_n$ соответственно.
 	Тогда $p(x) = (x - \alpha_1)^{l_1} \cdot (x - \alpha_2)^{l_2} \cdot \dots \cdot (x - \alpha_n)^{l_n} \cdot g(x), g(\alpha) \neq 0$ \\
 	\textbf{Доказательство:} Так как $k[x]$ - евклидова область, это ОГИ, значит работает разложение на неприводимые, пусть $p(x) = u_1(x) \cdot \dots \cdot u_n(x)$ - разложение на неприводимые. Пусть $\alpha_1, \dots, \alpha_n$ - наши корни кратности $l_1, \dots, l_n$ соответственно, тогда каждый двучлен вида $(x - \alpha_i)$ забирает ровно $l_i$ элементов $u_i$. Тогда наш многочлен выглядит так: $p(x) = (x - \alpha_1)^{l_1} \cdot \dots (x - \alpha_n)^{l_n} \cdot h(x)$, где $h(\alpha_i) \neq 0 \forall i$. \\
 	\textbf{Следствие:} $l_1 + l_2 + \dots + l_n \leq \deg p(x)$
 	
-	\newpage
 	\section{Интерполяционная формула Лагранжа, единственность.}
 	\subsection{Интерполяционная формула Лагранжа}
 	Если мы хотим, чтобы наша кривая проходила через определенные точки $y_0, y_1, \dots, y_n \in k$, то мы можем построить многочлен $f(x) \in k[x]: \deg f \leq n, f(x_i) = y_i$. 
@@ -646,17 +618,170 @@ citecolor=black
 	Пусть $h(x) = f(x) - g(x)$, где $f(x), g(x)$  - решают задачу интерполяции, тогда $h(x)$ будет иметь $n + 1$ корень при условии $\deg h \leq n$, что противоречит теореме безу, значит $h(x) = 0 \implies f(x) = g(x)$.
 	
 	\section{Критерий максимальности идеала. Критерий простоты идеала.}
+	\subsection{Критерий простоты идеала}
+	\textbf{Теорема:} $I \lhd R$ - простой $\iff R / I$ - область целостности \\
+	\textbf{Доказательство:} 
+	\begin{enumerate}
+		\item Достаточность: \\
+		$\left[a\right] \cdot \left[b\right] = 0$ в $R/I \implies \left[a \cdot b\right] = 0 \implies ab \in I \implies \left[ \begin{array}{l}
+			a \in I \\
+			b \in I
+		\end{array}\right.$ \\ Получается, если $ab = 0$, то либо $a = 0$, либо $b = 0 \implies R/I$ - область целостности 
+		\item Необходимость: \\
+		$ab \in I \implies \left[ab\right] = \left[a\right] \left[b\right] = 0 \implies \left[\begin{array}{l}
+			\left[a\right] = 0 \\
+			\left[b\right] = 0
+		\end{array}\right. \implies \left[\begin{array}{l}
+		a \in I \\
+		b \in I \\
+		\end{array}\right.$
+	\end{enumerate}
+	\subsection{Критерий максимальности идеала}
+	\textbf{Теорема:} $I \lhd R$ - максимален $\iff R / I$ - поле \\
+	\textbf{Доказательство:} 
+	\begin{enumerate}
+		\item Достаточность: \\
+		Пусть $\left[a\right] \in R/I$ и $\left[a\right] \neq 0$, мы хотим найти $\left[a\right]^{-1}$. $\left[a\right] \neq 0 \implies a \notin I$, введем идеал $J = I + \left(a\right), I \nsubseteqq J \implies J = R \implies 1 \in J \implies 1 \in I + \left(a\right) \implies 1 = i + ra \implies \left[1\right] = \left[ra\right] = \left[r\right] \left[a\right] \implies \left[r\right] = \left[a\right]^{-1} \implies R/I$ - поле
+		\item Необходимость: \\
+		$I \nsubseteqq J$, мы хотим показать, что $R = J$. Пусть $x \in J \setminus I \implies \left[x\right] \neq 0$. Введем $y: \left[x\right]\left[y\right] = 1 \implies \left[xy\right] = 1 \implies \left[xy - 1\right] = 0 \implies xy - 1 = i \in I \implies 1 = xy - i$, где $xy \in J, i \in J \implies 1 \in J \implies J = R$
+	\end{enumerate}
 	
 	\section{ Квадратичные вычеты и невычеты. Символ Лежандра. Формула
 		для символа Лежандра. Мультипликативность. Подсчет \texorpdfstring{$\left(\frac{-1}{p}\right)$}{(-1/p)}.}
-	\section{Формула Гаусса для символа Лежандра (с доказательством). Вы-
-		числение \texorpdfstring{$\left(\frac{2}{p}\right)$}{2/p}
+	\subsection{Квадратичные вычеты и невычеты}
+	Пусть мы хотим определить имеет ли уравнение $x^2 = a$ в поле $\mathbb{Z}/p\mathbb{Z}, a \neq 0, p \notin 2\mathbb{Z}$. Если такой $x$ существует, то $x^{p-1} = 1$ по малой теореме Ферма. \\ $1 = x^{p-1} = \left(x^2\right)^{\frac{p-1}{2}}=a^{\frac{p-1}{2}}$ \\
+	$\left(\mathbb{Z}/p\mathbb{Z}\right)^{\times} = \left(\mathbb{Z}/p\mathbb{Z}\right)\setminus{\left\{0\right\}}$ является циклической группой по умножению: \\
+	$\exists \gamma \in \left(\mathbb{Z}/p\mathbb{Z}\right):\forall b \in \left(\mathbb{Z}/p\mathbb{Z}\right)^{\times} \exists k \in \mathbb{N} \cup \{0\}: b = \gamma^k$ \\
+	$\gamma^{p-1} = 1$ и $\gamma^m \neq 1 \forall m \in \left[1, p-2\right]$ \\
+	Пусть $a^{\frac{p-1}{2}} = 1$ и $\exists k: a=\gamma^k$, $a^{\frac{p-1}{2}} = 1 = \gamma^{k\frac{p-1}{2}} \implies \frac{p-1}{2}k \ \vdots \ p-1 \iff \frac{k}{2} \in \mathbb{Z} \iff k \in 2\mathbb{Z}$. Пусть $k = 2n$, тогда если $x = \gamma^n$, то $x^2 = \gamma^{2n} = \gamma^k = a$ \\
+	$a^{\frac{p-1}{2}}$ - решение $x^2 = 1$, т.к мы находимся в поле, то у этого уравнения не больше двух решений по теореме безу, оба решения мы знаем: $x=1, x=-1$ \\
+	\textbf{Утверждение:} уравнение $x^2 = a$, где $a \neq 0$ имеет решения в $\mathbb{Z}/p\mathbb{Z} \iff a^{\frac{p-1}{2}} = 1$, иначе $a^{\frac{p-1}{2}} = -1$ \\
+	\subsection{Символ Лежандра. Формула для символа Лежандра. Мультипликативность}
+	\textbf{Определение:} символом Лежандра $\left(\frac{a}{p}\right)$ называется функция $\left(\mathbb{Z}/p\mathbb{Z}\right)^{\times} \to \{1, -1\}:$ 
+	$$\left(\frac{a}{p}\right) = \begin{cases}
+		1, x^2 = a \ \text{имеет решения} \\
+		-1, x^2 = a \ \text{не имеет решений}
+	\end{cases}$$
+	$$\left(\frac{a}{p}\right) = a^{\frac{p-1}{2}}$$ 
+	\textbf{Свойства:} 
+	\begin{enumerate}
+		\item $\left(\frac{a^2}{p}\right) = 1$
+		\item $\left(\frac{ab}{p}\right) = \left(\frac{a}{p}\right) \left(\frac{b}{p}\right)$ - мультипликативность
+	\end{enumerate}
+	\subsection{Подсчет \texorpdfstring{$\left(\frac{-1}{p}\right)$}{(-1/p)}}
+	$x^2 = -1 \mod p$,
+	\begin{itemize}
+		\item если имеет решение, то $\left(-1\right)^{\frac{p-1}{2}} = 1 \iff \frac{p-1}{2} \in 2\mathbb{Z} \iff p-1 \in 4\mathbb{Z} \iff p = 1 \mod 4$
+		\item если не имеет решения, то $\left(-1\right)^{\frac{p-1}{2}} = -1 \iff \frac{p-1}{2} \not in 2\mathbb{Z} \iff \frac{p-1}{2} = 2m + 1, m \in Z \iff p-1 = 4m + 2 \iff p = 4m + 3 \mod p \iff p = 3 \mod p$
+	\end{itemize} 
+	$$\left(\frac{-1}{p}\right) - \begin{cases}
+		1, p = 1 \mod 4 \\
+		-1, p = 3 \mod 4
+	\end{cases}$$
+	\section{Формула Гаусса для символа Лежандра (с доказательством). Вычисление \texorpdfstring{$\left(\frac{2}{p}\right)$}{2/p}
 	}
+	\subsection{Лемма:} $a \in \left(\mathbb{Z}/p\mathbb{Z}\right), p \notin 2\mathbb{Z}$.
+	Рассмотрим $\{a, 2a, 3a, \dots, \frac{p-1}{2} a\}$ по модулю $p = \{r_1, r_2,\dots, r_{p-1}\}, 1 < r_i < p-1$. Назовем такое множество $S$, пусть $L = |\{x\in S: x > \frac{p}{2}\}|$, тогда $\left(\frac{a}{p}\right) = \left(-1\right)^{L}$ \\
+	\textbf{Доказательство:} 
+	$S = \{u_1, \dots, u_L\} \cup \{v_{L+1}, \dots, v_{\frac{p-1}{2}}\}$, где $\frac{p}{2} < u_i < p - 1$ и $v_j < \frac{p}{2}$ \\
+	Перемножим все элементы в $S$: \\
+	$\prod\limits_{s\in S} s \underset{p}{\equiv} a \cdot 2a \cdot 3a \cdot \dots \cdot \frac{p-1}{2}a \underset{p}{\equiv} \left(\frac{p-1}{2}\right)!a^{\frac{p-1}{2}}$ \\
+	Рассмотрим $\{p-u_1, p-u_2, \dots, p-u_L\}, 1 \leq p - u_i < \frac{p}{2}$ \\
+	\textit{Лемма:} все элементы $\{p-u, \dots, p-u_L\} \cup \{v_{L+1}, \dots, v_{\frac{p-1}{2}}\}$ попарно различны \\
+	\textit{Доказательство:} \begin{itemize} 
+		\item 1 случай: $p - u_i = p - u_j \implies u_i = u_j \implies k_ia = k_ja \implies k_i = k_j \implies$ противоречие 
+		\item 2 случай: $v_i  = v_j$ аналогично первому случаю
+		\item 3 случай: $p - u_i = v_j \implies u_i + v_j \underset{p}{\equiv} 0 \implies k_ia + k_ja \underset{p}{\equiv} 0 \implies k_i + k_j \underset{p}{\equiv} 0$ но $k_i \in\left[1;\frac{p-1}{2}\right] \implies k_i + k_j \in \left[2, p-1\right]$
+	\end{itemize}
+	В $\{p - u_i, \dots, p-u_L\} \cup \{v_{L+1}, \dots, v_{\frac{p-1}{2}}\}$ все элементы $\in \left[1;\frac{p-1}{2}\right]$ \\
+	Их $\frac{p-1}{2}$ штук и они все различны по нашей лемме, тогда они просто равны $\{1,2,\dots, \frac{p-1}{2}\}$ \\
+	$\prod\limits_{r \in \{1, \dots, \frac{p-1}{2}\}}r = \left(\frac{p-1}{2}\right)! = \prod\limits_{i = 1}^{L} \left(p - u_i\right)\prod\limits_{j=L+1}^{\frac{p-1}{2}}v_j = \left(-1\right)^L \prod\limits_{i = 1}^{L}u_i \prod\limits_{j=L+1}^{\frac{p-1}{2}}v_j = \left(-1\right) ^ {L} \prod\limits_{s\in S} s = \left(\frac{p-1}{2}\right)a^{\frac{p-1}{2}}\left(-1\right)^L$ \\
+	$\left(\frac{p-1}{2}\right)! \left(-1\right)^L = \left(\frac{p-1}{2}\right)! a^{\frac{p-1}{2}}$, так как $\left(\frac{p-1}{2}\right)! \neq 0 \mod p$ на них можно сократить: $$a^{\frac{p}{2}} = \left(-1\right)^L \implies \left(\frac{a}{p}\right) = \left(-1\right)^L$$
+	\subsection{Вычисление \texorpdfstring{$\left(\frac{2}{p}\right)$}{(2/p)}}
+	$\left\{2, 4, 6, \dots, p-1\right\} = S$ \\
+	$L = \frac{p-1}{2} - \lfloor\frac{p}{4}\rfloor$ \\
+	$\left(\frac{2}{p}\right) = \left(-1\right)^L$ \\
+	Пусть $p = 1 \mod 8 \iff p = 1 + 8t$ \\
+	$L = 4t - 2t \in 2\mathbb{Z}$ \\
+	Пусть $p = 3 \mod 8 \iff p = 3 + 8t$ \\
+	$L = 1 + 4t - 2t \notin 2\mathbb{Z}$ \\
+	Пусть $p = 5 \mod 8 \iff p = 5 + 8t$ \\
+	$L = 2 + 4t - 2t - 1 \notin 2\mathbb{Z}$ \\
+	Пусть $p = 7 \mod 8 \iff p = 7 + 8t$ \\
+	$L = 3 + 4t - 1 - 2t \in 2\mathbb{Z}$ \\
+	Можно подобрать функцию, которая ведет себя таким же образом: $\frac{p^2 - 1}{8}$
+	$$\left(\frac{2}{p}\right) = \left(-1\right)^{\frac{p^2-1}{8}}$$
 	\section{Квадратичный закон взаимности*.}
+	\textbf{Формулировка:} $$\left(\frac{q}{p}\right) = \left(-1\right)^{\frac{p-1}{2} \cdot \frac{q-1}{2}} \cdot \left(\frac{p}{q}\right), p \neq q$$
 	\section{Теорема Гаусса. Теорема о мультипликативной группе поля.}
+	\subsection{Теорема Гаусса}
+	\textbf{Теорема:} $$ n = \sum\limits_{d | n, d \geq 1}\varphi\left(d\right), \forall n \geq 1$$
+	\textbf{Доказательство:} \\ $S = \left\{1, \dots, n\right\} = \bigcup\limits_{d | n, d \geq 1}S_d$ \\ $S_d = \left\{k \in S: \gcd\left(k, n\right) = d\right\}$, $S_d \cap S_d' \neq \varnothing \implies d = d'$ \\
+	$|S_d| = |\left\{k \in S : \gcd \left(\frac{k}{d}, \frac{n}{d}\right) = 1\right\} = \varphi\left(\frac{n}{d}\right)$ \\
+	$n = |S| = \sum\limits_{d | n, d \geq 1}|S_d| = \sum\limits_{d | n, d \geq 1}\varphi\left(\frac{n}{d}\right) = \sum\limits_{d | n, d \geq 1}\varphi\left(d\right)$
+	\subsection{Теорема о мультипликативной группе поля}
+	\textbf{Теорема:} пусть $F$ - конечное поле, тогда $F^\times = F \setminus \{0\}$ - циклическая группа, то есть $\exists a \in F^\times : \forall g \in F^\times \exists k \in \mathbb{N}: g = a^k$ \\
+	\textbf{Доказательство:} $G = F^\times, \psi\left(d\right) =$ количество элементов $G$ порядка $d$ $$g \in G \text{ имеет порядок } d, \text{ если } g^d = 1, \text{ но } g^k \neq 1 \forall k \in \left[1;d-1\right]$$ Пусть мы нашли $h \in G$ порядка $d$, рассмотрим $<h> = \{1, h, h^2, h^3, \dots, h^{d-1}\}$ - сколько тут элементов порядка $d$? $$h^k \in <h> \text{ имеет порядок } d \iff \left(h^k\right)^m \text{ закрасит всю группу}$$
+	Когда $\left(h^k\right)^m = h$? $h^{km}=h^1 \iff km = 1 \mod d \iff \gcd \left(k, d\right) = 1$ Получается в $<h>$ ровно $\varphi\left(d\right)$ элементов, которые имеют порядок $d$. Если мы находим хотя бы один элемент порядка $d$, то автоматически находим таких $\varphi\left(d\right)$ штук. \\
+	Любой элемент $<h>$ удовлетворяет уравнению $x^d=1$. Так как мы существуем в поле, у этого уравнения $\leq d$ различных решений, значит $<h>$ - все решения $x^d = 1$. \\
+	Пусть $t$ - элемент порядка $d$, тогда $t$ решает $x^d = 1 \implies t \in <h>$ $$\psi\left(d\right) = \left[\begin{array}{l}
+		0, \text{ если не нашли} \\
+		\varphi\left(d\right), \text{ иначе}
+	\end{array}\right.\implies \psi\left(d\right) \leq \varphi\left(d\right)$$ $n = \sum\limits_{d | n} \psi\left(d\right) \leq \sum\limits_{d | n}\varphi\left(d\right) = n \implies \psi\left(d\right) = \varphi\left(d\right) \forall d | n$ \\
+	Для $d = n \psi\left(n\right) = \varphi(n) \geq 1 \implies$ нашли хотя бы 1 элемент порядка $n$ \\
+	\textbf{Лемма:} $G$ - конечная группа, $|G| = n$, $\alpha \in G$, тогда $ord \ \alpha | n$ \\
+	\textbf{Доказательство:} $C = <\alpha>$, $|C| = ord \ \alpha$, $G = \bigcup\limits_{g \in G} gC$, это действительно равенство, т.к $\forall g \in G g \in gC$. $$gC \cap g'C = \left[\begin{array}{l}
+		\varnothing \\
+		gC = g'C
+	\end{array}\right.$$ Пусть $z \in gC \cap g'C$ \\ $z = gc_1 = g'c_2 \implies g = g'c_2c^{-1}_1$ \\
+	Пусть $h \in gC \implies h = gc = g'c_2c^{-1}_1c \in g'C \implies gC \subset g'C$, аналогично можно доказать в обратную сторону, тогда $gC = g'C$ \\
+	$n = |G| = |C \sqcup g_1C \sqcup g_2C \sqcup \dots \sqcup g_kC| = |C| + |g_1C| + \dots + |g_kC| = ord \ \alpha + ord \ \alpha + \dots + ord \ \alpha = \left(k + 1\right) ord \ \alpha \implies ord \ \alpha | n$
 	\section{Критерий максимальности для идеалов в k[x]. Построение поля
 		комплексных чисел. Алгебраическая запись.}
-	\section{Классификация автоморфизмов C над R, модуль комплексного чис-
-		ла. Его мультипликативность. Оценка суммы.}
+	\subsection{Критерий максимальности для идеалов в k[x]}
+	$k\left[x\right]$ - ОГИ \\
+	\textbf{Утверждение: } идеал $\left(f\right) \text{ - максимален } \iff f \text{ - неприводим}$ \\
+	\textbf{Доказательство:} \begin{enumerate}
+		\item Достаточность: \\
+		Пусть $f = g \cdot h$ и $\deg g \geq 1, \deg h \geq 1$, $\left(f\right) \nsubseteqq \left(g\right)$, так как $g \in \left(g\right)$ и $ g \notin \left(f\right)$, но $\left(g\right) \notin R \implies \left(f\right)$ - не максимален, противоречие, следовательно $f$ - неприводим. 
+		\item Необходимость: \\
+		Пусть $\left(f\right) \nsubseteqq J, J$ - главный идеал $\implies J = \left(g\right)$
+		$$\left(f\right) \nsubseteqq \left(g\right) \implies g | f \implies \left[\begin{array}{l}
+			g \equiv const \ \neq 0 \implies \left(g\right) k\left[x\right] \\
+			g \sim f \implies \left(f\right) = \left(g\right) \text{, но по условию не равны}
+		\end{array}\right.$$
+	\end{enumerate}
+	\subsection{Построение поля комплексных чисел. Алгебраическая запись.}
+	Возьмем кольцо многочленов и факторизуем его по неприводимому $x^2 + 1$, таким образом получается новое поле комплексных чисел, это действительно поле, так как идеал максимален.
+	$$ R\left[x\right]/\left(x^2+1\right)  = \mathbb{C}$$
+	$$ \mathbb{C} = \left\{a + bx: a,b \in \mathbb{R}\right\}$$ 
+	И если заменить $x$ на $i$ то получим алгебраическую запись: $a + bi$
+	\section{Классификация автоморфизмов \texorpdfstring{$\mathbb{C}$}{C} над \texorpdfstring{$\mathbb{R}$}{R}, модуль комплексного числа. Его мультипликативность. Оценка суммы.}
+	\subsection{Классификация автоморфизмов \texorpdfstring{$\mathbb{C}$}{C} над \texorpdfstring{$\mathbb{R}$}{R}} 
+	\textbf{Определение:} автоморфизмом $\mathbb{C}$ над $\mathbb{R}$ называется изоморфизм $$\sigma: \mathbb{C} \to \mathbb{C}: \forall r \in \mathbb{R} \sigma\left(r\right) = r$$
+	\textbf{Утверждение:} существует два автоморфизма $\mathbb{C}$ над $\mathbb{R}$: $id, -$, $Gal(\mathbb{C}/\mathbb{R}) \overset{\sim}{=} \mathbb{Z}/2\mathbb{Z}$ \\
+	\textbf{Доказательство:} Пусть $\sigma$ - автоморфизм $\mathbb{C}$ над $\mathbb{R}$ \\
+	$\sigma\left(a + ib\right) = \sigma\left(a\right) + \sigma\left(i\right)\sigma\left(b\right) = a + \sigma\left(i\right)b$ \\
+	$\sigma\left(i\right)^2 = \sigma\left(i^2\right) = \sigma(-1) = -1$
+	$$ \text{так как } \sigma\left(i\right) \text{ - решение } x^2 = -1 \sigma\left(i\right) = \left[\begin{array}{l}
+		i \implies id \\
+		-i
+	\end{array}\right.$$
+	$$ \text{сопряжение $\overline{a + ib}$ : } \sigma\left(a + ib\right) = a - ib$$
+	Свойство: $z \in \mathbb{C}, \overline{z} = z \iff z \in \mathbb{R}$
+	\subsection{Модуль комплексного числа. Его мультипликативность. Оценка суммы}
+	Хотим построить отображение $\mathbb{C} \to \mathbb{R}$
+	$\frac{z + \overline{z}}{2} - $ Re$z$, вещественная часть \\
+	$\frac{z - \overline{z}}{2i} - $ Im$z$, мнимая часть \\
+	$\overline{z \cdot \overline{z}} = z \cdot \overline{z} \implies z \cdot \overline{z} \in \mathbb{R}$
+	$z \cdot \overline{z} = (a +ib)(a - ib) = a^2 + b^2 \geq 0$
+	$|z| = \sqrt{z \cdot \overline{z}}$ \\
+	\textbf{Свойства модуля:}
+	\begin{enumerate}
+		\item $|z_1 \cdot z_2| = \sqrt{z_1z_2\overline{z_1}\overline{z_2}} = \sqrt{z_1\overline{z_1}} \cdot \sqrt{z_2\overline{z_2}} = |z_1| \cdot |z_2|$
+		\item $|z_1 + z_2| \leq |z_1| + |z_2|$ - неравенство треугольника для векторов $\left(a, b\right)$ и $\left(c, d\right)$, если $z_1 = a + ib, z_2 = c + id$
+	\end{enumerate}
 	\section{Основная теорема алгебры*.}
+	\textbf{Теорема: } $$p\left(z\right) \in \mathbb{C}\left[z\right], \deg p \geq 1 \implies \exists z_0 \in \mathbb{C} : p\left(z_0\right) = 0$$
+	\textbf{Следствие: } $$ p \in \mathbb{C}\left[z\right], \deg p = n \implies p \text{ имеет ровно $n$ корней}$$
 \end{document}
