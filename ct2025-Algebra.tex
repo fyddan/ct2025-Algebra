@@ -27,7 +27,9 @@ citecolor=black
 		\Large created by \href{https://github.com/fyddan}{fyddan}
 		\\
 		\vspace{3cm}
-		\href{https://www.youtube.com/playlist?list=PLd7QXkfmSY7ZbGBitHpwqW7Lv5h6QGDaj}{\includegraphics[width=0.5\textwidth]{sources/label.png}}
+		\href{https://www.youtube.com/playlist?list=PLd7QXkfmSY7ZbGBitHpwqW7Lv5h6QGDaj}{\includegraphics[width=0.5\textwidth]{sources/label.png}} \\
+		\vspace{3cm}
+		\Large также спасибо Ерину Алексею за определения
 		
 	\end{titlepage}
 	
@@ -784,4 +786,322 @@ citecolor=black
 	\section{Основная теорема алгебры*.}
 	\textbf{Теорема: } $$p\left(z\right) \in \mathbb{C}\left[z\right], \deg p \geq 1 \implies \exists z_0 \in \mathbb{C} : p\left(z_0\right) = 0$$
 	\textbf{Следствие: } $$ p \in \mathbb{C}\left[z\right], \deg p = n \implies p \text{ имеет ровно $n$ корней}$$
+	\section{Эквивалентность трех определений базиса конечномерного векторного пространства.}
+	\textbf{Определение:} $B \subset V$. Говорят, что $B$ - базис, если $B$ порождающее и линейно независимое. \\
+	\textbf{Теорема:} Следующие условия равносильны \begin{enumerate}
+		\item $B$ - базис 
+		\item $B$ - максимальное по включению линейно независимое множество
+		\item $B$ - минимальное по включению порождающее множество
+	\end{enumerate}
+	\textbf{Доказательство:} \begin{itemize}
+		\item $1 \implies 2$ \\
+		Пусть $B$ - базис, $v \in V$, тогда $v = \sum\limits_{i=1}^{n}\alpha_ie_i, e_i \in B$. \\
+		Тогда $B \cup \left\{v\right\}$ - линейно зависимое $\implies B$ - максимальное по включению линейно независимое.
+		\item $2 \implies 1$ \\
+		Нам надо показать, что $B$ - порождающее. \\
+		Пусть $v \in V\setminus B$, тогда $B \cup \left\{v\right\}$ -линейно зависимое $\implies \sum\limits_{i = 1}^{n}\alpha_ie_i + \beta v = 0, e_i \in B$ \\
+		$\beta \neq 0$ так как $B$ - линейно независимое, тогда $v = -\sum\limits_{i = 1}^{n}\frac{\alpha_i}{\beta}e_i$
+		\item $1 \implies 3$ \\
+		Пусть $B$ - базис. Предположим, что $B\setminus\left\{e\right\}$ все еще порождающее. Тогда $e = \sum\limits_{i = 1}^{n}\alpha_ie_i, e_i \in B\setminus\left\{e\right\}$, но $B$ должно быть линейно независимым.
+		\item $3 \implies 1$ \\
+		Покажем, что $B$ - линейно независимое. Пусть $\sum\limits_{i = 1}^n\alpha_ie_i = 0$, где $\exists \alpha_k \neq 0$, тогда $$e_k = -\sum\limits_{i = 1, i\neq k}^n \frac{\alpha_i}{\alpha_k}e_i$$
+		Тогда $B \setminus \left\{e_k\right\}$ все еще порождающее.
+	\end{itemize}
+	\section{Дополнение линейно независимого множества до базиса.}
+	Пусть $V$ - векторное пространство, $S$ - линейное независимое множество, тогда $\exists B$ - базис, такой что $S \subset B$. \\
+	\textbf{Доказательство:} $A = \left\{\text{подмножества в $V$, которые содержат $S$ и линейно независимые}\right\}, A \neq \varnothing$, т.к $S \in A$, $A$ - частично упорядоченное множество по $\leq: x\leq x` \leq \dots$ \\
+	Рассмотрим произвольную цепочку $C$ множества $A$: $x\leq x' \leq x'' \leq \dots$, назовем $A_c = \bigcup\limits_{x \in C}X$, почему $A_c \in A$? \\
+	\begin{enumerate}
+		\item $\subseteq S$
+		\item пусть $\left\{e_1, \dots, e_k\right\} \subset A_c$, тогда $\exists X \in C: \left\{e_1, \dots, e_n\right\} \subset X$, но $X$ - линейно независимое, тогда $A_c$ тоже линейно независимое, тогда $A_c \in A$ 
+	\end{enumerate}
+	Заметим, что $\forall X \in C X \subseteq A_c$ \\
+	\textbf{Лемма Цорна:} если в частично упорядоченном множестве для любой цепочки есть верхняя граница, то существует максимальный элемент \\
+	По лемме Цорна существует $B \in A_c$ - максимальный элемент, тогда $S\subseteq B$ и $B$ максимальное по включению линейно независимое множество, которое содержит $S$, тогда оно вообще максимальное по включению линейно независимое, а значит является базисом
+	\section{Лемма Стейница (лемма о подмене).}
+	\textbf{Лемма:} $V$ - векторное пространство. Пусть $S = \left\{w_1, \dots, w_m\right\}$ - порождающее множество $V$, $L = \left\{v_1, \dots, v_n\right\}$ - линейно независимое множество $V$. \\
+	\textbf{Тогда:} \begin{enumerate}
+		\item $n \leq m$
+		\item после перенумерования $S$ множество $\left\{v_1, v_2, \dots, v_n, w_{n+1}, \dots, w_m\right\}$ все еще порождающее.
+	\end{enumerate}
+	\textbf{Доказательство:} по индукции по $n$ \\
+	База: При $n = 0$ верно (ничего не меняем) \\
+	Переход: пусть для $n-1$ векторов уже знаем. \\
+	Перенумеруем $S$ и заменим $n-1$ элементов, получим $S'=\left\{v_1, \dots, v_{n-1}, w_n, w_{n+1}, \dots, w_m\right\}$ \\
+	Так как $S'$ - порождающее множество, $v_n$ можно выразить из его элементов. $$v_n = \sum\limits_{i = 1}^{n-1}\alpha_i v_i + \sum\limits_{i = n}^{m}\beta_i w_i$$
+	Мы хотим выразить $w_n$, чтобы заменить его на $v_n$ 
+	\begin{itemize}
+		\item 1 случай: $\beta_i = 0 \implies \sum\limits_{i = 1}^{n-1}\alpha_i v_i - v_n = 0$, но это невозможно из-за того, что $L$ - линейно независимое множество
+		\item 2 случай: $\exists \beta_i \neq 0$, перенумеруем $S'$ так, чтобы $\beta_n \neq 0$, тогда $$w_n = \frac{v_n}{\beta_n} - \sum\limits_{i = 1}^{n-1}\frac{\alpha_i}{\beta_n}v_i - \sum\limits_{i = n + 1}^{m} \frac{\beta_i}{\beta_n}w_i$$
+	\end{itemize}
+	Рассмотрим множество $S'' = \left\{v_1, \dots, v_{n-1}, w_{n+1}, \dots, w_m\right\}$\\
+	\textit{Замечание:} если $S' = \left\{v_1, \dots, v_{n-1}\right\}$, то $v_n = \sum\limits_{i = 1}^{n-1}\alpha_i v_i$, но $L$ - линейно независимое. \\
+	Утверждаем, что $S''$ - порождающее. Так как $S'$ - порождающее, $v \in V$ $$v = \sum\limits_{i = 1}^{n-1}\alpha_i v_i + \gamma_n w_n + \sum\limits_{i = n + 1}^{m}\gamma_iw_i$$
+	Теперь мы можем подставить вместо $w_n$ наше выражение из второго случая, таким образом любой вектор выражается из элементов множества $S'' \implies S''$ - порождающее
+	
+	\section{Корректность размерности: любые два базиса конечномерного векторного пространства имеют одинаковую мощность.}
+	\textbf{Определение:} пусть для векторного пространства $V$ существует конечный базис $B$, тогда назовем $\dim V  = |B|$ - размерность $V$ \\
+	\textbf{Утверждение:} Определение размерности корректно \\
+	\textbf{Доказательство:} $B, B'$ - базисы $V$ и $B$ - конечный \\
+	$B$ - порождающий и $B'$ линейно независимый $\implies \forall \text{ конечного подмножества} B'$ линейно независимо, пусть $S \subset B'$ - конечно подмножество, тогда $|S| \leq |B| \forall S \subset B'$ \\
+	Тогда $|B'| \leq |B|$, теперь скажем, что $B$ - линейно независимый и $B'$ - порождающий, тогда $|B| \leq |B'| \implies |B| = |B'|$
+	\section{Формула Грассмана. Антипример. Критерий прямой суммы.}
+	\subsection{Формула Грассмана}
+	\textbf{Теорема:} если $V = U + V$, где все конечномерны, то $$\dim \left(U + W\right) = \dim U + \dim W - \dim U \cap \dim W$$
+	\textbf{Доказательство:} пусть $\left\{e_1, \dots, e_k\right\}$ - базис $U \cap W$, т.к $U \cap W \subset U$, базис $U \cap W$ можно расширить до базиса $U$ - $\left\{e_1, \dots, e_k, u_1, \dots, u_m\right\}$. Аналогично для $W$ - $\left\{e_1, \dots, e_k, w_1, \dots, w_n\right\}$, тогда $\left\{e_1, \dots,e_k, u_1, \dots, u_m, w_1, \dots, w_n\right\}$ - базис $U + W$ 
+	\begin{itemize}
+		\item порождаемость: пусть $u + w \in U + W, u = \sum\alpha_ie_i + \sum \beta_iu_i, w = \sum \mu_ie_i + \sum \gamma_iw_i \implies u + w = \sum \left(\mu_i + \alpha_i\right)e_i + \sum \beta_iu_i + \sum\gamma_iw_i$
+		\item линейная независимость: пусть $$ \sum\alpha_ie_i + \sum\beta_iu_i + \sum\gamma_iw_i = 0 \left(*\right)$$
+		$$ \sum\beta_iu_i = -\sum\alpha_ie_i - \sum\gamma_iw_i$$
+		$\sum\beta_iu_i \in U, -\sum\alpha_ie_i - \sum\gamma_iw_i \implies \sum\beta_iu_i \in U\cap W\implies \sum\beta_iu_i = \sum s_i e_i \implies \sum\beta_iu_i - \sum s_ie_i = 0\implies \beta_i = 0 \forall i = 1\dots n$ \\
+		$\left(*\right) \sum\alpha_ie_i + \sum\gamma_iw_i = 0 \implies \alpha_i = 0 \forall i = 1\dots k, \gamma_i = 0 \forall i = 1\dots n$
+	\end{itemize}
+	$$\dim\left(U + W\right) = k + n + m = \left(k + n\right) + \left(k + m\right) - k = \dim W + \dim U - \dim U \cap W$$
+	\subsection{Антипример}
+	Допустим у нас есть пространства в $\mathbb{R}^3$: \\
+	$U_1 = <x, y>, U_2 = <x + z>, U_3 = <z>$, $$\dim\left(U_1 + U_2 + U3\right) = 3 \neq 2 + 1 + 1 - 0 - 0 - 0 + 0 = 4$$
+	\subsection{Критерий прямой суммы}
+	\textbf{Определение:} сумма векторных подпространств называется прямой, если $U \cap W = 0$ $$U \bigoplus W$$ \\
+	\textbf{Утверждение:} сумма $V + W$ - прямая $ \iff \forall v \in U + W \exists!u \in U \exists! w \in W: v = u + w$ \\
+	\textbf{Доказательство:} \begin{itemize}
+		\item Достаточность: \\
+		$v = u_1 + w_1 = u_2 + w_2 \implies u_1 - u_2 \in U = w_1 - w_2 \in W, U\cap W =0 \implies u_1 = u_2, w_1 = w_2$
+		\item Необходимость: \\
+		$v \in U \cap W, v = v + 0 = 0 + v$, где сначала $v \in U$, затем $v \in W$, тогда по единственности разложения $v = 0$
+	\end{itemize}
+	\section{Теорема о размернорсти ядра и образа.}
+	\section{Матрица линейного отображения. Изоморфизм \texorpdfstring{$Hom\left(k^n,k^m\right)\overset{\sim}{=}M_{m\times n} \left(k\right)$}{HOM(k^n,k^m) = M_mxn(k)}. Матрица композиции операторов.}
+	\section{Замена базиса (в области определения и области значения). Канонический вид матрицы линейного отображения.}
+	\section{Универсальное свойство базиса.}
+	\section{Двойственный базис. Изоморфизм \texorpdfstring{$V \text{ и } V^*$}{V и V^*} для конечномерного $V$. Канонический изоморфизм $V$ и $V^{**}$ для конечномерного $V$.}
+	\section{Лемма о размерности аннулятора.}
+	\section{Сопряженный оператор. Матрица сопряженного оператора.}
+	\section{Аннулятор образа равен ядру сопряженного.}
+	\section{Ранг оператора. Равенство строчного и столбцового рангов оператора. Теорема Кронекера–Капелли.}
+	\section{Тензорное произведение, существование и единственность. Тензорная алгебра.}
+	\section{Внешняя степень, построение. Внешняя алгебра.}
+	\section{Базис внешней степени. Подсчет размерности внешней степени.}
+	\section{ Индуцированные гомоморфизмы на тензорной и внешней алгебрах. Определитель. Мультипликативность определителя.}
+	\section{Изоморфизм \texorpdfstring{$V \overset{\sim}{=}\left(\lambda^{n-1}V\right)^*$}{V = (Lambda^n-1V)}}
+	\section{ Критерий обратимости оператора в терминах определителя. Построение обратного оператора с помощью изоморфизма \texorpdfstring{$V \overset{\sim}{=}\left(\lambda^{n-1}V\right)^*$}{V = (Lambda^n-1V)}.}
+	\section{ Модуль над кольцом; определение конечнопорожденного и свободного модуля. Построение копредставления для конечно-порожденного модуля.}
+	\section{Нормальная форма Смита для матриц над областью главных идеалов.}
+	\section{Теорема о структуре конечно-порожденного модуля над ОГИ.}
+	\section{Структура конечно-порожденных абелевых групп.}
+	\section{Теорема Гамильтона–Кэли.}
+	\section{Существование и единственность жордановой нормальной формы	над алгебраически замкнутым полем.}
+	\newpage
+	\section{Определения}
+	\begin{description}
+		\item [Соответсвие] Между множетсвами $A$ и $B$, подмножество $R \subset A \times B$. 
+		\item [Отображение множеств] Соответвие $f$ из $A$ в $B$, в котором выполняется $\forall a \in A : \exists! b \in B : (a, b) \in f$ (элемент из $A$ соответсвует ровно одному элементу из $B$).
+		\item [Инъекция] Отображение $f$ из $A$ в $B$, для которого выполняется $\forall a, a' \in A : f(a) = f(a') \implies a = a'$ (все элементы из $A$ отображаются в различные значения).
+		\item [Сюръекция] Отображение $f$ из $A$ в $B$, для которого выполняется $\forall b \in B : \exists a \in A : f(a) = b$ (для каждого значения в $B$ есть соответствующее значение в $A$).
+		\item [Обратимость отображения слева и справа] Отношение $g$ является обратным слева к $f$, если $g \circ f = \text{id}_A$. Справа -- если $f \circ g = \text{id}_B$.
+		\item [Бинарная операция] На множестве $X$, отображение $X \times X \rightarrow X$.
+		\item [Моноид] Множество $M$ с бинарной операцией $\cdot$, для которых выполняется:
+		\begin{description}
+			\item [Ассоциативность] $\forall a, b, c \in M : a \cdot (b \cdot c) = (a \cdot b) \cdot c$.
+			\item [Существование нейтрального элемента] $\exists e \in M : \forall m \in M : e \cdot m = m \cdot e = e$.
+		\end{description}
+		\item [Группа] Моноид, в котором дополнительно существует обратный элемент: $\forall m \in M \setminus \{e\} : \exists m^{-1} \in M : m \cdot m^{-1} = e$.
+		\item [Абелева группа] Группа, в которой операция коммутативна ($a \cdot b = b \cdot a$).
+		\item [Кольцо] Множество $R$ с операциями $(\cdot, +)$, такое что:
+		\begin{itemize}
+			\item $(R, +)$ -- комутативная (абелева) группа
+			\item Выполняется дистрибутивность умножения:
+			$$\forall a, b, c \in R : \begin{cases}
+				a \cdot (b + c) = a \cdot b + a \cdot c \\
+				(a + b) \cdot c = a \cdot c + b \cdot c
+			\end{cases}$$
+		\end{itemize}
+		\item [Подкольцо] Подмножество $S$ кольца $R$, в котором результаты операций тоже лежат в подмножестве.
+		$$\begin{cases}
+			S \subset R \\
+			\forall s_1, s_2 \in S : s_1 + s_2 \in S \\
+			\forall s_1, s_2 \in S : s_1 \cdot s_2 \in S
+		\end{cases}$$
+		\item [Идеал] Непустое подмножество кольца, для которого выполняется:
+		\begin{itemize}
+			\item $\forall a, b \in I : a + b \in I$
+			\item $\forall a \in I : \forall r \in R : r \cdot a \in I$
+		\end{itemize}
+		\item [Делитель нуля] Ненулевой элемент кольца $r \in R \setminus \{0\}$, такой что $\exists s \in R : s \ne 0 \land r \cdot s = 0$.
+		\item [Область целостности] Кольцо, в котором нет делителей нуля.
+		\item [Ассоциированные элементы] Элементы кольца $a \ne 0$, $b \ne 0$, такие что $a\ \vert\ b$ и $b\ \vert\ a$.
+		\item [Евклидова область] Область целостности в котором сущесвует функция нормы $N : R \setminus \{0\} \rightarrow \mathbb{N}_0$, такая что:
+		\begin{itemize}
+			\item $N(a \cdot b) \ge N(a)$ (и $N(a \cdot b) = N(b)$ если $b \in R^{\times}$)
+			\item Можно делить с остатком, уменьшая норму: $\forall a, b \ne 0 \in R : \exists q, r \in R : a = q \cdot b + r \land (N(r) < N(b) \lor r = 0)$.
+		\end{itemize}
+		\item [Наибольший общий делитель] Для двух элементов кольца $a, b \in R$, максимальный по норме элемент $g \in R$, такой что $g\ \vert\ a$, $g\ \vert\ b$.
+		\item [Область главных идеалов] Область целостности, в которой каждый идеал главный (т.е. имеет вид $(i) = \{r \cdot i : r \in R\}$).
+		\item [Неприводимый элемент] Элемент $r \in R$, для которого из равенства $r = s \cdot t$ следует, что $s \in R^{\times}$ или $t \in R^{\times}$ (нельзя разбить на необратимые элементы).
+		\item [Фактор-кольцо] Кольцо $R/I$, в котором $a = b \iff (a - b) \in I$.
+		\item [Гомоморфизм колец] Отображение $\varphi : R \rightarrow S$, которое сохраняет структуру кольца:
+		\begin{itemize}
+			\item $\varphi(a) + \varphi(b) = \varphi(a + b)$
+			\item $\varphi(a) \cdot \varphi(b) = \varphi(a \cdot b)$
+			\item $\varphi(1_R) = 1_S$ для колец с единицей
+		\end{itemize}
+		\item [Ядро гомоморфизма] Все элементы, которые отправляются в ноль: \\
+		$\text{Ker}\ \varphi = \{r : r \in R, \varphi(r) = 0 \}$.
+		\item [Образ гомоморфизма] Множество значений гомоморфизма: \\
+		$\text{Im}\ \varphi = \{\varphi(r) : r \in R \} = \{s \in S : \exists r \in R, \varphi(r) = s \}$.
+		\item [Произведение колец] Кольцо пар из элементов других колец с покомпонентными операциями:
+		\begin{itemize}
+			\item $R \times S = \{(r, s) : r \in R, s \in S \}$
+			\item $(r_1, s_1) + (r_2, s_2) = (r_1 + r_2, s_1 + s_2)$
+			\item $(r_1, s_1) \cdot (r_2, s_2) = (r_1 \cdot r_2, s_1 \cdot s_2)$
+		\end{itemize}
+		\item [Функция эйлера] Функция $\varphi : \mathbb{N} -> \mathbb{N}$, и $\varphi(n)$ равно количеству натуральных чисел $\le n$, которые взаимно просты с $n$. \\
+		$\varphi(n) = |\{x : 1 \ge x \le n \land \text{gcd}(x, n) = 1\}|$.
+		\item [Кольцо многочленов над полем] Кольцо $K[x]$, которое содержит последовательности коэффицентов $(k_0, k_1, \dots, k_n, 0, \dots)$, каждая из которых соответствует выражению $k_0 + k_1 x + k_2 x^2 + \cdots + k_n x^n$.
+		\item [Корень многочлена] Элемент поля $x \in K[x]$ когда $P(x) = 0$ (очев?).
+		\item [Формальное равенсто многочленов] Многочлен $P(x) = p_0 + p_1 x + p_2 x^2 + \dots$ формально равен $Q(x) = q_0 + q_1 x + q_2 x^2 + \dots$ если $p_0 = q_0, p_1 = q_1, \dots$ ($\forall i : p_i = q_i$).
+		\item [Фукнциональное равенство многочленов] Многочлен $P \in K[x]$ функционально равен $Q \in K[x]$ если $\forall x \in K : P(x) = Q(x)$. 
+		\item [Сумма, произведение, пересечение идеалов] \
+		\begin{description}
+			\item [Cумма] $I + J = \{i + j : i \in I, j \in J\}$
+			\item [Произведение] $IJ = \{\sum_k i_k j_k : i_k \in I, j_k \in J\}$
+			\item [Пересечение] $I \cap J = \{x : x \in I \land x \in J\}$
+		\end{description}
+		\item [Взаимно простые (комаксимальные) идеалы] Идеалы $I$ и $J$ кольца $R$, такие что $I + J = R \iff 1 \in I + J$.
+		\item [Формула Тейлора] \textbf{Тут нужна просто формула $m$-ой производной?}
+		\item [Кратность корня многочлена] Корень $\alpha$ многочлена $P$ имеет кратность $m$ если $P = (x - \alpha)^m \cdot G$, где $G \ne 0$.
+		\item [Итерполяционный многочлен Лагранжа] Способ построить многочлен, проходящий через множество точек $\{(x_0, y_0), \dots\, (x_n, y_n)\}$.
+		\begin{align*}
+			f(x)   &= \sum_{i=0}^n y_i L_i(x) \\
+			L_i(x) &= \frac{(x - x_0) \cdots (x - x_{i-1})(x - x_{i+1}) \cdots (x - x_n)}{(x_i - x_0) \cdots (x_i - x_{i-1})(x_i - x_{i+1}) \cdots (x_i - x_n)} = \frac{\prod_{j \ne i} x - x_j}{\prod_{j \ne i} x_n - x_j}
+		\end{align*}
+		\item [Максимальный идеал] Идеал $I \triangleleft R$, $I \ne R$, когда для некоторого $J$: $I \subset J \implies (J = I) \lor (J = R)$.
+		\item [Простой идеал] Идеал $I \triangleleft R$, $I \ne R$, в котором $ab \in I \implies (a \in I) \lor (b \in I)$.
+		\item [Квадратичный вычет] Число $x \in \mathbb{Z}_p$, такое что $\exists y \in \mathbb{Z}_p : y^2 = x$ ($x$ является квадратом некоторого числа по модулю $p$).
+		\item [Символ Лежандра] Фукнция $\left(\frac{a}{p}\right)$, которая показывает, является ли $a$ квадратичным вычетом по модулю $p$. \\
+		$$
+		\left(\frac{a}{p}\right) = \begin{cases}
+			1,  & a \text{кв. вычет} \mod p \\
+			-1, & a \text{не кв. вычет} \mod p \\
+		\end{cases}
+		$$
+		\item [Поле комплексных чисел] Поле $\mathbb{C} = \mathbb{R}[i] / (i^2 + 1)$ -- дополнение действительных чисел, в котором $i^2 = -1$.
+		\item [Комплексное сопряжение] Для числа $x = a + bi \in \mathbb{C}$: $\bar{x} = a - bi$.
+		\item [Модуль комплекного числа] Для $x = a + bi$, $|x| = \sqrt{a^2 + b^2} = \sqrt{x \bar{x}}$, расстояние от $0$ на комплекной плоскости.
+		\item [Векторное пространство] Множество $V$ поверх $K$ с операциями $+ : V \times V \rightarrow V$ и $\cdot : K \times V \rightarrow V$, где дополнительно:
+		\begin{itemize}
+			\item $(V, +)$ -- абелева группа
+			\item $(\alpha + \beta)v = \alpha v + \beta v$
+			\item $\alpha (v_1 + v_2) = \alpha v_1 + \alpha v_2$
+			\item $(\alpha \beta) v = \alpha (\beta v)$
+			\item $1 \cdot v = v$
+		\end{itemize}
+		\item [Линейная независимость] Векторы $v_1$ и $v_2$ линейно независимы, если не существует таких $a$ и $b$, что $a v_1 + b v_2 = \vec{0}$.
+		\item [Базис векторного пространства] Два эквивалентных определения:
+		\begin{itemize}
+			\item Максимальное по включению множество независимых векторов
+			\item Минимальное по включение порождающее множество
+		\end{itemize}
+		\item [Размерность векторного пространства] $\dim V := |B|$, где $B$ -- базис пространства $V$.
+		\item [Линейное отображение] Фукнция (гомоморфизм) $\mathcal{L} : V \rightarrow W$, такая что
+		\begin{itemize}
+			\item $\mathcal{L}(v_1 + v_2) = \mathcal{L}(v_1) + \mathcal{L}(v_2)$
+			\item $\mathcal{L}(\alpha \cdot v) = \alpha \mathcal{L}(v)$
+		\end{itemize}
+		\item [Ядро линейного отображения] Вектора, которые отправляются в $\vec{0}$: \\
+		$\text{Ker}\ \mathcal{L} = \{v : v \in V, \mathcal{L}(v) = \vec{0}\}$
+		\item [Образ линейного отображения] Все достижимые вектора после отображения: \\
+		$\text{Im}\ \mathcal{L} = \{u : \exists v \in V, \mathcal{L}(v) = u \} = \{\mathcal{L}(v) : v \in V\}$
+		\item [Матрица линейного отображения] Если $e = (e_1, e_2, \dots, e_n)$ -- базис $V$, $f = (f_1, \dots, f_m)$ -- базис $W$, то матрица линейного отображения $\mathcal{L}$ -- таблица вида:
+		$$
+		\begin{pmatrix}
+			a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+			a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+			\vdots  & \vdots  & \ddots & \vdots  \\
+			a_{m,1} & a_{m,2} & \cdots & a_{m,n}
+		\end{pmatrix}
+		$$
+		Преобразование задаётся как:
+		\begin{align*}
+			\mathcal{L} e_1 &= a_{1,1} f_1 + \dots + a_{m,1} f_m \\
+			\mathcal{L} e_2 &= a_{1,2} f_1 + \dots + a_{m,2} f_m \\
+			\vdots \\
+			\mathcal{L} e_n &= a_{1,n} f_1 + \dots + a_{m,n} f_m
+		\end{align*}
+		\item [Двойственное пространство] Пространство линейных функционалов -- функций, преобразующих векторы в скаляры при этом сохраняя линейность:
+		\begin{itemize}
+			\item $\forall \varphi \in V^*, v, w \in V : \varphi(v) + \varphi(w) = \varphi(v + w)$
+			\item $\forall \varphi \in V^*, v \in V, k \in K : k \varphi(v) = \varphi(kv)$
+		\end{itemize}
+		Можно их считать гомоморфизмами из $V$ в $K$.
+		\item [Двойственный базис] Координатные функции для базиса $V$ ($e = (e_1, e_2, \dots, e_n)$):
+		$$
+		e_i^*(e_j) = \delta_i^j =
+		\begin{cases}
+			1, i = j \\
+			0, i \ne j
+		\end{cases}
+		$$
+		\item [Аннулятор множества] Множество линейных функционалов, которые обнуляют все векторы в подпространстве $W \subset V$:
+		$\text{Ann}\ W = \{\varphi \in V^* : \forall \omega \in W\ \varphi(\omega) = 0 \}$
+		\item [Сопряжённый оператор] Оператор над двойственными векторами, который соответствует применению линейного оператора к пространству перед применением линейного функционала: \\
+		$\mathcal{L}^*(\varphi)(v) = \varphi(\mathcal{L}(v)) \implies \mathcal{L}^*(\varphi) = \varphi \circ \mathcal{L}$
+		
+		Переход: $V \xrightarrow{\mathcal{L}} U \xrightarrow{\varphi} K$.
+		\item [Ранг оператора] Равные понятия ранга:
+		\begin{description}
+			\item [Строчный] $\text{rk}_r(\mathcal{L}) = \dim (\text{Im}\ \mathcal{L}^*)$
+			\item [Столбцовый] $\text{rk}_l(\mathcal{L}) = \dim (\text{Im}\ \mathcal{L})$
+		\end{description}
+		\item [Тензорное произведение]
+		\item [Тензорная алгебра]
+		\item [Внешнаяя степень]
+		\item [Внешнаяя алгебра]
+		\item [Определитель]
+		\item [Модуль] Над кольцом $R$, абелева группа $M$ с отображением $\cdot : R \times M \rightarrow R$ и
+		\begin{itemize}
+			\item $\forall r_1, r_2 \in R, m \in M : (r_1 + r_2) \cdot m = r_1 \cdot m + r_2 \cdot m$
+			\item $\forall r \in R, m_1, m_2 \in M : r \cdot (m_1 + m_2) = r \cdot m_1 + r \cdot m_2$
+			\item $\forall r_1, r_2 \in R, m \in M : r_1 \cdot (r_2 \cdot m) = (r_1 \cdot r_2) \dot m$
+			\item $\forall m \in M : 1 \cdot m = m$
+		\end{itemize}
+		\item [Свободный модуль] Модуль, для которого $\exists n : M \cong R^n$.
+		\item [Конечнопорожденный модуль] Все элементы модуля являются линейными комбинациями конечного порождающего множества: \\
+		$\exists m_1, \dots, m_n \in M : \forall x \in M : \exists r_1, \dots, r_n \in R : x = r_1 \cdot m_1 + \dots + r_n \cdot m_n$
+		\item [Нормальная форма Смита] Если $R$ -- ОГИ и $A$ -- матрица, то существуют обратимые матрицы $U$ и $V$, такие что
+		$$
+		UAV = \begin{pmatrix}
+			\alpha_1 & 0        & 0       & \dots    & 0      & \dots & 0      \\
+			0        & \alpha_2 & 0       &          &        &       &        \\
+			0        & 0        & \ddots  &          & \vdots &       & \vdots \\
+			\vdots   &          &         & \alpha_t &        &       &        \\
+			0        &          & \dots   &          & 0      & \dots & 0      \\
+			\vdots   &          &         &          & \vdots &       & \vdots \\
+			0        &          & \dots   &          & 0      & \dots & 0      \\
+		\end{pmatrix}
+		$$
+		\item [Нильпотентный оператор] Оператор, если применить который $n$ раз подряд, он станет отправлять всё в $\vec{0}$.
+		\item [Жорданова клетка] Компонент нормальной формы, матрица вида:
+		% тут можно получше сделать матрицу наверное
+		$$
+		\begin{pmatrix}
+			\lambda &         &         & \dots   &        & 0       \\
+			1       & \lambda &         &         &        &         \\
+			0       & 1       & \lambda &         &        & \vdots  \\
+			0       & 0       & 1       & \lambda &        &         \\
+			\vdots  & \vdots  &         & \ddots  & \ddots & 0       \\
+			0       & 0       & \dots   & 0       & 1      & \lambda \\
+		\end{pmatrix}
+		$$
+		\item [Жорданова нормальная форма] Способ записи матрицы оператора в диагональном виде в определенном базисе:
+		$$
+		\begin{pmatrix}
+			J(\lambda_1) &              & \dots        &        & 0            \\
+			& J(\lambda_2) &              &        &              \\
+			\vdots       &              & J(\lambda_3) &        & \vdots       \\
+			&              &              & \ddots &              \\
+			0            &              & \dots        &        & J(\lambda_m) \\
+		\end{pmatrix}
+		$$
+		Где $J(\lambda_i)$ -- жорданова клетка.
+	\end{description}
 \end{document}
