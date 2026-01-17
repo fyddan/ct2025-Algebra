@@ -29,7 +29,7 @@ citecolor=black
 		\vspace{3cm}
 		\href{https://www.youtube.com/playlist?list=PLd7QXkfmSY7ZbGBitHpwqW7Lv5h6QGDaj}{\includegraphics[width=0.5\textwidth]{sources/label.png}} \\
 		\vspace{3cm}
-		\Large также спасибо Ерину Алексею за определения
+		\Large также спасибо Ерину Алексею за определения и Давыденко Тарасу за билеты по тензорам и внешним степеням
 		
 	\end{titlepage}
 	
@@ -87,7 +87,7 @@ citecolor=black
 	\end{figure}
 	
 	\subsection{Биекция}
-	\textbf{Определение:} биекция это отображение, которое и инъективно и биективно, то есть можно составить взаимно однозначное соответствие.
+	\textbf{Определение:} биекция это отображение, которое и инъективно и сюръективно, то есть можно составить взаимно однозначное соответствие.
 	
 	\begin{figure}[H]
 		\centering
@@ -201,14 +201,14 @@ citecolor=black
 	\subsection{Алгоритм Евклида}
 	\textbf{Теорема:} $R$ - евклидово кольцо $a, b \in R$ и они одновременно не ноль, тогда: $$1) \exists gcd(a, b) = d \in R \ 2) \exists x, y \in R: d = ax + by $$
 	\textbf{Доказательство:} 
-	1 случай: $a = 0$ или $b = 0$, тогда $gcd(0, b) = b$ или $gcd(a, 0) = a$, так как $a = gcd(a, 0) = a \cdot 1 + 0 \cdot 1$ и аналогично для $b$ 
-	2 случай: $a, b \neq 0$ 
-	$a = q_0b + r_0 \land N(r_0) < N(b)$ 
-	$b = q_1r_0 + r_1 \land N(r_1) < N(r_0)$ 
-	$r_0 = q_2r_1 + r_2 \land N(r_2) < N(r_1)$ 
-	$\dots$ 
-	$r_{n-1} = q_{n-1}r_n + r_{n+1} \land N(r_{n+1}) < N(r_n)$ 
-	на каком то шаге станет:
+	1 случай: $a = 0$ или $b = 0$, тогда $gcd(0, b) = b$ или $gcd(a, 0) = a$, так как $a = gcd(a, 0) = a \cdot 1 + 0 \cdot 1$ и аналогично для $b$ \\
+	2 случай: $a, b \neq 0$ \\
+	$a = q_0b + r_0 \land N(r_0) < N(b)$ \\
+	$b = q_1r_0 + r_1 \land N(r_1) < N(r_0)$ \\
+	$r_0 = q_2r_1 + r_2 \land N(r_2) < N(r_1)$ \\
+	$\dots$  \\
+	$r_{n-1} = q_{n-1}r_n + r_{n+1} \land N(r_{n+1}) < N(r_n)$ \\
+	на каком то шаге станет: \\
 	$r_n = q_nr_{n + 1} \implies r_{n+2} = 0$ \\
 	\textbf{Утверждение:} $r_{n+1} = gcd(a, b)$ \\
 	\textbf{Доказательство:}
@@ -407,7 +407,7 @@ citecolor=black
 	Покажем, что $\sigma$ - гомоморфизм:
 	\begin{enumerate}
 		\item Сложение: $\sigma(k + k') = ([k + k']_n, [k + k']_m) = ([k]_n + [k']_n, [k]_m + [k']_m) = ([k]_n, [k]_m) + ([k']_n, [k']_m) = \sigma(k) + \sigma(k')$
-		\item Умножение: Умножение: $\sigma(k \cdot k') = ([k \ cdot k']_n, [k \cdot k']_m) = ([k]_n \cdot [k']_n, [k]_m \cdot [k']_m) = ([k]_n, [k]_m) \cdot ([k']_n, [k']_m) = \sigma(k) \cdot \sigma(k')$
+		\item Умножение: Умножение: $\sigma(k \cdot k') = ([k \cdot k']_n, [k \cdot k']_m) = ([k]_n \cdot [k']_n, [k]_m \cdot [k']_m) = ([k]_n, [k]_m) \cdot ([k']_n, [k']_m) = \sigma(k) \cdot \sigma(k')$
 		\item Сохраняет единицу: $\sigma([1]_{mn}) = ([1]_{mn} \mod n, [1]_{mn} \mod m) = ([1]_n, [1]_m)$
 	\end{enumerate}
 	Определим $\ker \sigma = \{k \in \mathbb{Z}/nm\mathbb{Z}: k = 0 \mod n \land k = 0 \mod m\}$, пусть у нас $k \in \ker \sigma$, тогда $k$ делится на $m$ и $n$, тогда $k = 0 \mod nm \implies \sigma$ - инъекция. Так как у нас одинаковое количество элементов в $\mathbb{Z}/nm\mathbb{Z}$ и $\mathbb{Z}/n\mathbb{Z} \times \mathbb{Z}/m\mathbb{Z}$ и $\sigma$ - инъекция, каждый элемент слева получает уникальный справа, при этом каждый слева имеет связь, получается левое полностью покрывает правое, тогда это сюръекция и биекция соответственно. Если $\sigma$ - биекция, то мы уже ранее доказывали, что $\sigma$ - изоморфизм.
@@ -817,7 +817,7 @@ citecolor=black
 	\end{enumerate}
 	Заметим, что $\forall X \in C X \subseteq A_c$ \\
 	\textbf{Лемма Цорна:} если в частично упорядоченном множестве для любой цепочки есть верхняя граница, то существует максимальный элемент \\
-	По лемме Цорна существует $B \in A_c$ - максимальный элемент, тогда $S\subseteq B$ и $B$ максимальное по включению линейно независимое множество, которое содержит $S$, тогда оно вообще максимальное по включению линейно независимое, а значит является базисом
+	По лемме Цорна существует $B \subset A_c$ - максимальный элемент, тогда $S\subseteq B$ и $B$ максимальное по включению линейно независимое множество, которое содержит $S$, тогда оно вообще максимальное по включению линейно независимое, а значит является базисом
 	\section{Лемма Стейница (лемма о подмене).}
 	\textbf{Лемма:} $V$ - векторное пространство. Пусть $S = \left\{w_1, \dots, w_m\right\}$ - порождающее множество $V$, $L = \left\{v_1, \dots, v_n\right\}$ - линейно независимое множество $V$. \\
 	\textbf{Тогда:} \begin{enumerate}
@@ -859,7 +859,7 @@ citecolor=black
 	$$\dim\left(U + W\right) = k + n + m = \left(k + n\right) + \left(k + m\right) - k = \dim W + \dim U - \dim U \cap W$$
 	\subsection{Антипример}
 	Допустим у нас есть пространства в $\mathbb{R}^3$: \\
-	$U_1 = \left\langle x, y\right\rangle, U_2 = \left\langle x + z\right\rangle, U_3 = \left\langle z\right\rangle$, $$\dim\left(U_1 + U_2 + U3\right) = 3 \neq 2 + 1 + 1 - 0 - 0 - 0 + 0 = 4$$
+	$U_1 = \left\langle x, y\right\rangle, U_2 = \left\langle x + z\right\rangle, U_3 = \left\langle z\right\rangle$, $$\dim\left(U_1 + U_2 + U_3\right) = 3 \neq 2 + 1 + 1 - 0 - 0 - 0 + 0 = 4$$
 	\subsection{Критерий прямой суммы}
 	\textbf{Определение:} сумма векторных подпространств называется прямой, если $U \cap W = 0$ $$U \oplus W$$ \\
 	\textbf{Утверждение:} сумма $V + W$ - прямая $ \iff \forall v \in U + W \exists!u \in U \exists! w \in W: v = u + w$ \\
@@ -922,6 +922,31 @@ citecolor=black
 	композиция в данном случае аналогична умножению матриц, когда мы берем строку из $A$ и поэлементно умножаем на столбец из $B$, то есть наш элемент в $AB$ задается следующим образом: $$ab_{ik} = \sum\limits_{j = 1}^n a_{ij}b_{jk}$$
 	Новая матрица имеет размер $m \times k$
 	\section{Замена базиса (в области определения и области значения). Канонический вид матрицы линейного отображения.}
+	\subsection{Замена базиса}
+	$\mathcal{L}: V \to W$, $e$ - базис $V$ размерности $n$, $f$ - базис $W$. Тогда построим матрицу $$ \left[\mathcal{L}\right]_{e, f} = \begin{pmatrix}
+		\alpha_{11} & \alpha_{12} & \cdots & \alpha_{1n} \\
+		\alpha_{21} & \alpha_{22} & \cdots & \alpha_{2n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\alpha_{m1} & \alpha_{m2} & \cdots & \alpha_{mn}
+	\end{pmatrix}$$
+	Теперь мы хотим например заменить базис $e$ на базис $r$. Запишем матрицу перехода $T_1$, в которой $i$ строка - разложение $r_i$ базисного вектора по базисным векторам $e$.
+	$$ T_1 = \begin{pmatrix}
+		\gamma_{11} & \gamma_{12} & \cdots & \gamma_{1n} \\
+		\gamma_{21} & \gamma_{22} & \cdots & \gamma_{2n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\gamma_{n1} & \gamma_{n2} & \cdots & \gamma_{nn}
+	\end{pmatrix}
+	$$
+	$$\left[\mathcal{L}\right]_{e,f} T_1 = \left[L\right]_{r, f}$$
+	Аналогично хотим заменить базис $f$ на базис $s$
+	$$ T_2 = \begin{pmatrix}
+		\beta_{11} & \beta_{12} & \cdots & \beta_{1m} \\
+		\beta_{21} & \beta_{22} & \cdots & \beta_{2m} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		\beta_{m1} & \beta_{m2} & \cdots & \beta_{mm}
+	\end{pmatrix}
+	$$
+	$$T_2\left[\mathcal{L}\right]_{e,f} = \left[\mathcal{L}\right]_{e,s}$$
 	\subsection{Канонический вид матрицы линейного отображения.}
 	\textbf{Теорема:} $\mathcal{L}: V \to W$ - линейное отображение, Тогда $\exists$ базис $e_1, \dots, e_n$ пространства $V$ и базис $f_1, \dots, f_m$ пространства $W$, такое что: $$\left[\mathcal{L}\right]_{e,f} = \begin{pmatrix}
 		1 & 0 & 0 & 0 & 0 &\cdots & 0 \\
@@ -944,16 +969,345 @@ citecolor=black
 	\end{enumerate} 
 	Также покажем единственность такого отображения: пусть $\mathcal{L}$ и $\mathcal{T}$: \\ $\mathcal{L}\left(e_i\right) = f\left(i\right) \forall i = 1\dots n, \mathcal{T}\left(e_i\right) = f\left(i\right) \forall i = 1\dots n $ $$\left(\mathcal{L} - \mathcal{T}\right)\left(v\right) = \left(\mathcal{L} - \mathcal{T}\right)\left(\sum\limits_{i = 1}^n \alpha_ie_i\right) = \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) - \sum\limits_{i = 1}^n \alpha_if\left(e_i\right) = 0 \ \forall v \in V$$
 	\section{Двойственный базис. Изоморфизм \texorpdfstring{$V \text{ и } V^*$}{V и V^*} для конечномерного $V$. Канонический изоморфизм $V$ и $V^{**}$ для конечномерного $V$.}
+	\subsection{Двойственный базис. Изоморфизм \texorpdfstring{$V \text{ и } V^*$}{V и V^*} для конечномерного $V$.}
+	\textbf{Определение:} $V$ - векторное пространство, $V^* = Hom\left(V, k\right)$ - пространство линейных функционалов или двойственное пространство. \\ Пусть $e_1, \dots, e_n$ - базис $V$, тогда определим набор векторов $e_{1}^*, \dots, e_{n}^* \in V^*$ следующим образом: $$e^*_i\left(e_j\right) = \delta_{ij} = \begin{cases}
+		1, i=j \\
+		0, i\neq j
+	\end{cases}$$ \\
+	\textbf{Утверждение:} $e_1^*, \dots, e_n^* = e^*$ - базис $V^*$ \\
+	\textbf{Доказательство:} \begin{itemize}
+		\item порождаемость: \\
+		Пусть $\varphi \in V^*$, мы хотим получить равенство $\varphi = \sum\limits_{i = 1}^n\beta_ie_i^*$. Посмотрим как ведет себя выражение с обеих сторон на базисном векторе $e_j$: $\varphi\left(e_j\right) = \beta_je^*_j\left(e_j\right) = \beta_j$, тогда можно утверждать, что $\varphi = \sum\limits_{i = 1}^n \varphi\left(e_i\right)e_i^*$. Это просто два линейных функционала, они равны, если равны на всех базисных векторах. $\varphi\left(e_i\right) = \beta_i = \varphi\left(e_i\right)e_i^*\left(e_i\right) = \varphi\left(e_i\right)$
+		\item линейная независимость: \\
+		Пусть $\sum\limits_{i = 1}^n \gamma_i e_i^* = 0$, подставим базисный вектор $e_j$: $\gamma_je^*_j\left(e_j\right) = \gamma_j = 0 \ \forall j = 1, \dots, n$
+	\end{itemize}
+	Из этого следует, что $V \overset{\sim}{=} V^*$
+	\subsection{Канонический изоморфизм $V$ и $V^{**}$ для конечномерного $V$.}
+	\textbf{Теорема:} пространства $V$ и $\left(V^*\right)^*$ канонически изоморфны. \\
+	\textbf{Доказательство:} $V^{**} = Hom\left(Hom\left(V, k\right), k\right) \overset{\overset{!}{\sim}}{=} V$ - мы хотим построить такой изоморфизм. \\
+	Построим $\zeta: V \to V^{**}$ следующим образом: $v \mapsto \left(\varphi \in V^* \mapsto \varphi\left(v\right)\right)$. Утверждаем, что $\zeta$ - изоморфизм. Так как у нас $\dim V = \dim V^* = \dim V^{**}$, нам достаточно просто доказать, что $\zeta$ - инъекция. Пусть $v \in \ker \zeta$, тогда отображение $\left(\varphi \mapsto \varphi\left(v\right)\right)$ - нулевое. Покажем, что $v = 0$. В пространстве $V^*$ существует линейный функционал $v^*: v^*\left(v\right) = 1$, если $v \neq 0$. Действительно, если $v \neq 0$, то мы можем построить базис $v,e_2, \dots, e_n$ и двойственный базис $v^*, e_2^*, \dots, e_n^*$. Значит $v^*\left(v\right) \neq 0$, противоречие. Тогда $\ker \zeta = 0 \implies \zeta$ - инъекция, а значит и биекция.\\
+	Также нам надо показать, что $\zeta$ - линейное отображение. \\
+	$\zeta\left(v_1 + v_2\right) = \varphi\left(v_1 + v_2\right) = \varphi\left(v_1\right) + \varphi\left(v_2\right) = \zeta\left(v_1\right) + \zeta\left(v_2\right), v_1, v2 \in V, \varphi \in V^*$ \\
+	$\zeta\left(\gamma v\right) = \varphi\left(\gamma v\right) = \gamma\varphi\left(v\right) = \gamma\zeta\left(v\right), v \in V, \gamma \in k$ \\
+	Тогда $\zeta$ - биекция и линейное отображение, а следовательно - изоморфизм, причем канонический, так как мы не определяли базис.
 	\section{Лемма о размерности аннулятора.}
-	\section{Сопряженный оператор. Матрица сопряженного оператора.}
+	\textbf{Определение:} Пусть $W \subset V$ - подпространство, тогда $Ann W = \left\{\varphi \in V^*: \varphi\left(w\right) = 0 \ \forall w \in W\right\}$
+	\textbf{Лемма:} $W \subset V$, тогда $\dim W + \dim \ AnnW = \dim V$ \\
+	\textbf{Доказательство:} пусть $e_1, \dots, e_k$ - базис W, достроим его до $e_1, \dots, e_k, e_{k+1}, \dots, e_n$ - базиса $V$. Покажем, что $e^*_{k + 1}, \dots, e^*_n$ - базис $AnnW$. Линейная независимость вытекает из того, что изначально эти векторы были линейно независимыми в базисе $V^*$, а мы просто взяли подмножество. \\
+	Порождаемость: пусть $\varphi \in AnnW \implies \varphi = \sum\limits_{i = 1}^k\beta_ie_i^* + \sum\limits_{i = k + 1}^ n \beta_ie_i^*$. Но так как $e_1, \dots, e_k$ - базис $W$, на нем $\varphi$ будет равна нулю, следовательно $\varphi = \sum\limits_{i = k + 1}^n \beta_ie_i^*$, тогда это базис, чего мы и хотели.
+	\section{Сопряженное отображение. Матрица сопряженного отображения.}
+	\subsection{Сопряженный оператор.} 
+	\textbf{Определение:} пусть $\mathcal{L}: V \to U$ - линейное отображение, тогда определим $\mathcal{L}^*: U^* \to V^*$ следующим образом: пусть $\varphi \in U^*, \mathcal{L}^*\left(\varphi\right) =\varphi\circ\mathcal{L} \in V^*$ - сопряженное или двойственноеу к $\mathcal{L}$
+	\subsection{Матрица сопряженного оператора.} 
+	$\left[\mathcal{L}^*\right]_{f^*, e^*} = \left[\mathcal{L}\right]^T_{e, f}$, если $A = \left(a_{ij}\right)$ - матрица размера $m\times n$, тогда $A^T = \left(a_{ji}\right)$ - матрица размера $n \times m$, то есть мы берем просто матрицу, переворачиваем ее и отзеркаливаем.
 	\section{Аннулятор образа равен ядру сопряженного.}
+	\textbf{Утверждение:} $Ann\left(Im\mathcal{L}\right) = \ker \mathcal{L}^*, \mathcal{L}: V \to U$ \\
+	\textbf{Упражнение:} $W \subset V, AnnW \subset V^*:$ \\
+	Пусть $\varphi \in V^*: \varphi\left(v\right) = 0 \ \forall v \in V$, среди этих элементов также есть те, которые лежат в $W$, тогда получается, что $\varphi \in AnnW$. \\ Теперь пусть $\varphi_1, \varphi_2 \in AnnW \\$ 
+	$\left(\varphi_1 + \varphi_2\right)\left(w\right) = \varphi_1\left(w\right) + \varphi_2\left(w\right) = 0$ \\
+	$\left(\gamma\varphi\right)\left(w\right) = \gamma\varphi\left(w\right) = 0$ \\
+	\textbf{Доказательство:} $\varphi \in Ann\left(Im\mathcal{L}\right) \iff \varphi\left(u\right) = 0 \ \forall u \in Im\mathcal{L} \iff \varphi\left(\mathcal{L}\left(v\right)\right) = 0 \ \forall v \in V \iff \mathcal{L}^*\left(\varphi\right)\left(v\right) = 0 \ \forall v \in V \iff \mathcal{L}^*\left(\varphi\right) = 0 \iff \varphi \in \ker\mathcal{L}^*$
 	\section{Ранг оператора. Равенство строчного и столбцового рангов оператора. Теорема Кронекера–Капелли.}
+	\subsection{Ранг оператора.}
+	\textbf{Определение (через матрицы):} пусть $\mathcal{L}: \underset{e}{V}\to \underset{f}{W}$. Тогда строчный ранг $\left[\mathcal{L}\right]_{e, f}$ - максимальное количество линейно независимых строк этой матрицы. Столбцовый ранг $\left[\mathcal{L}\right]_{e, f}$ - максимальное количество линейно независимых столбцов этой матрицы. \\
+	\textbf{Определение:} $\mathcal{L}: \underset{e}{V}\to \underset{f}{W}$. Строчный ранг - $\dim Im\mathcal{L}^*$, столбцовый ранг - $\dim Im\mathcal{L}$
+	\subsection{Равенство строчного и столбцового рангов оператора.} 
+	\textbf{Теорема:} $\dim Im \mathcal{L} = \dim Im \mathcal{L}^*$ - столбцовый ранг равен строчному рангу \\
+	\textbf{Доказательство:} Пусть $m = \dim U^*$. $\dim Im\mathcal{L}^* = \dim U^* - \dim \ker \mathcal{L}^* = m - \dim Ann\left(Im\mathcal{L}\right) = m - \left(m - \dim Im\mathcal{L}\right) = \dim Im\mathcal{L}$ \\
+	Тогда $rank\mathcal{L}$ - любой из этих рангов
+	\subsection{Теорема Кронекера-Капелли.}
+	\textbf{Теорема:} решение $\mathcal{L}x = b$ существует $\iff rank\left[\mathcal{L}\right] = rank\left(\left[\mathcal{L}\right]\right |b)$ \\
+	\textbf{Доказательство:} пусть $\mathcal{L}: V \to U, b\in U.$ Хотим найти $x \in V:\mathcal{L}x = b$ \\
+	Решение существует если $b \in Im \mathcal{L} \iff b \in \left\langle\mathcal{L}e_1, \dots, \mathcal{L}e_n\right\rangle$ где эти вектора базисные в $V$ $\iff$ Максимальное количество линейно независимых в $\left\{\mathcal{L}e_1, \dots, \mathcal{L}e_n\right\}$ равно максимальному количеству линейно независимых элементов в $\left\{\mathcal{L}e_1, \dots, \mathcal{L}e_n, b\right\} \iff rank\left[\mathcal{L}\right] = rank\left(\left[\mathcal{L}\right] | b\right)$
 	\section{Тензорное произведение, существование и единственность. Тензорная алгебра.}
+	\textbf{Определение:} \\
+	отображение $\varphi: V \times W \to U $ называют билинейным
+	когда оно линейно по обоим аргументам по отдельности, то есть:
+	пусть для каждого $v \in V$ определено $f_v: W \to U$
+	такое что $\forall w \in W: f_v(w)=\varphi(v,w)$
+	и для каждого $ w\in W$ определено $g_w: V \to U$
+	такое что $\forall v\in V:g_w(v)=\varphi(v,w)$ 
+	тогда если $ \forall v\in V :f_v\in Hom(W,U)$ и $ \forall w \in W: g_w \in Hom(V,U)$ то
+	$ \varphi$ билинейное отображение\\
+	\textbf{Определение:} \\
+	тензорным произведением пространств $V$ и $W$ называют такую пару $(T,\tau)$
+	где $T$ это векторное пространство, $\tau$ это билинейное отображение из $V,W$ в $T$
+	что для каждого билинейного отображения $\varphi$ из $V,W$ в любое пространство $U$
+	выполняется: \\
+	$ \exists! \widetilde{\varphi}\in Hom(T,U):\forall (v,w)\in V \times W:\widetilde{\varphi}(\tau(v,w))=\varphi(v,w)$
+	то есть $ \exists!\widetilde{\varphi}:\widetilde{\varphi}\circ\tau=\varphi$
+	такое пространство $T$ с естественным $ \tau$ обозначается $ V\otimes W$ \\
+	\textbf{Доказательство:} \\
+	докажем, что такое пространство единственно с точностью до изоморфизма, 
+	пусть таким свойством относительно $V,W$ обладают два пространства $(T,\tau)$ и $(\widetilde{T},\widetilde{\tau})$, докажем что $T\cong\widetilde{T}$.
+	По определению, для $ \widetilde{\tau}:V\times W\to \widetilde{T}$
+	существует единственное $ \psi: T\to \widetilde{T}$ такое что $ \psi\circ\tau=\widetilde{\tau}$
+	и в другую сторону для $ \tau:V\times W\to \widetilde T$
+	существует единственное $ \widetilde\psi:\widetilde T \to T$ такое что $ \widetilde\psi\circ\widetilde\tau=\tau$
+	то есть $ \psi\circ\tau=\widetilde\tau$
+	$ \widetilde\psi\circ\widetilde\tau=\tau$ Значит $\widetilde\psi\circ\psi\circ\tau=\widetilde\psi\circ\widetilde\tau=\tau$,
+	заметим, что для $ \widetilde\psi\circ\psi$ подходит $ id_T$,
+	но так как мы определяли $ \psi,\widetilde\psi$ как единственные подходящие,
+	то $ \widetilde\psi\circ\psi$ и будет только $\mathrm{id}_T$ \\
+	аналогично будет $ \psi\circ\widetilde{\psi}=id_{\widetilde{T}}$, а так как $ \psi,\widetilde\psi$ друг другу обратны слева и справа, значит это взаимнообратные биекции, а так как это были линейные отображения между $T$ и $\widetilde T$, то мы и нашли изоморфизм \\
+	существование такого $ V\otimes W$ докажем конструктивно \\
+	пусть $ e_1,e_2,...,e_n$ это базис $ V$
+	пусть $ f_1,f_2,...,f_m$ это базис $ W$
+	тогда составим для всех $ i=1,2,...,n$ и $ j=1,2,...,m$
+	пары из элементов базисов, и обозначим их новыми буквами
+	$ \tau(e_i,f_j)=e_i\otimes f_j$, распишем значения в общем виде \\
+	пусть $ v=\sum\limits_{i=1}^n\alpha_i e_i$ и $ w=\sum\limits_{j=1}^m \beta_j f_j$,
+	тогда $ \tau(v,w)=\tau\left( \sum\limits_{i=1}^n\alpha_i e_i , \sum\limits_{j=1}^m \beta_j f_j \right)=\sum\limits_{i=1}^n \sum\limits_{j=1}^m \alpha_i \beta_j (e_i\otimes f_j)$ \\
+	заметим, что теперь можем по любому билинейному $ \varphi:V\times W\to U$
+	построить линейное $ \widetilde\varphi:V\otimes W\to U$, определив его таким образом:
+	$ \widetilde\varphi(e_i\otimes f_j)=\varphi(e_i,f_j)$ и, так как имеем совпадение результатов на базисе и однозначное определение $ \widetilde\varphi$ от $ \varphi$, то получаем, что наше $ V\otimes W$ соответствует определению. \\
+	заметим, что как векторное пространство,
+	$ V\otimes W\cong k^{n\cdot m}$ где $k$ это поле, над которым определены $V,W$, определим тензорное произведение последовательности пространств $ V_1,V_2,...,V_n$ где $ n>2$ по цепному правилу:
+	$$ \bigotimes\limits_{i=1}^n V_i=V_1\otimes \left(\bigotimes\limits_{i=1}^{n-1} V_{i+1}\right)$$
+	так, определим тензорную степень пространства:
+	$ V^{\otimes n}=\bigotimes\limits_{i=1}^n V$ если $ n>0$
+	$ V^{\otimes 0}=k$ где $ k$ это поле, над которым задано $ V$, если $ n=0$\\
+	определим прямую (внешнюю) сумму последовательности пространств
+	пронумерованной целыми неотрицательными числами
+	как конечные (финитные) последовательности элементов пространств
+	из последовательности, то есть последовательности, где
+	первый элемент принадлежит первому пространству,
+	второй второму,
+	и так далее, но с некоторого момента, элементы становятся
+	стабильно нулями
+	а именно
+	$$
+	\bigoplus\limits_{n=0}^\infty V_n
+	=
+	\left\{
+	s\in \times_{n=0}^\infty V_n :
+	\exists n\in \mathbb{Z}_{+}\ \forall m\in \mathbb{Z}_+\ (m>n)\Rightarrow (s_m=0)
+	\right\}
+	$$
+	тогда тензорной алгеброй называют такое пространство
+	$$ TV=\bigoplus\limits_{n=0}^\infty V^{\otimes n}$$
+	в котором определено не коммутативное, дистрибутивное относительно сложения умножение,
+	для $v,w\in TV$ обозначается $ v\otimes w$, пусть $ e_1,e_2,...,e_n$ это базис $ V$
+	тогда зададим базис в $ TV$ , это будет
+	$$ \bigcup\limits_{k=0}^\infty \left\{ \bigoplus\limits_{j=1}^k e_{i_j}:i \in \left(\mathbb{Z}\cap[1;n]\right)^k\right\}$$
+	где как и в тензорном произведении двух пространств, такие элементы
+	будут считаться отдельными буквами
+	то есть элементы базиса это конечные последовательности индексов
+	элементов базиса изначального $ V$ , например: \\
+	при $ i=()$ получим произведение пустой последовательности векторов \\
+	при $ i=(2)$ получим $ e_2$ \\
+	при $ i=(1,2,3)$ получим $ e_1\otimes e_2\otimes e_3$ \\
+	а произведение двух элементов $ v,w\in TV$ в общем случае будет таким:
+	сначала разложим элементы по введённому базису, а после этого переберём все элементы $ \alpha\cdot e_{i_1}\otimes e_{i_2}\otimes \dots \otimes e_{i_k}$в разложении $v$ и элементы $ \beta\cdot e_{j_1}\otimes e_{j_2}\otimes \dots \otimes e_{j_l}$, тогда к произведению прибавится $ \alpha\cdot \beta \cdot e_{i_1}\otimes e_{i_2}\otimes \dots \otimes e_{i_k}\otimes e_{j_1}\otimes e_{j_2}\otimes \dots \otimes e_{j_l}$, то есть $ v,w$ раскладываются по базису,
+	перебираются все пары произведений элементов базиса $ V$,
+	находится коэффициент при одном в $ v$ и другом в $ w$ соответственно, и результат это сумма по всем парам элементов базиса $ TV$
+	произведения коэффициентов при них в $ v$ и $ w$ соответственно, на их конкатенацию (склеивание строк)
+	например: \\
+	$ (e_1+e_1\otimes e_2)\otimes (3\cdot e_2\otimes e_1+2\cdot e_1\otimes e_1)$ раскладываем
+	по дистрибутивности, получаем: $ e_1\otimes (3\cdot e_2\otimes e_1)+e_1\otimes (2\cdot e_1\otimes e_1)+e_1\otimes e_2\otimes(3\cdot e_2\otimes e_1)+e_1\otimes e_2\otimes(2\cdot e_1\otimes e_1)$
+	упростим выражение, приведём подобные слагаемые, вынесем константы:
+	$$ 3\cdot e_1\otimes e_2\otimes e_1+2\cdot e_1\otimes e_1\otimes e_1+3\cdot e_1\otimes e_2\otimes e_2\otimes e_1+2\cdot e_1\otimes e_2\otimes e_1\otimes e_1$$
 	\section{Внешняя степень, построение. Внешняя алгебра.}
+	в алгебре $TV$ определим такой двусторонний идеал:
+	$$I=\left\langle v\otimes v :~v\in V \right\rangle$$
+	то есть идеал, натянутый на произведение
+	двух одинаковых векторов подряд.
+	если записать как множество, то получится
+	$$I=\left\{ w_1\otimes v\otimes v\otimes w_2 : v\in V,\; w_1,w_2\in TV\right\}.$$
+	тогда внешней алгеброй над $V$ назовём $TV/I$,
+	обозначается $\wedge V$.
+	в такой алгебре умножение обозначается $\wedge$,
+	и станет антикоммутативным, то есть
+	$$\forall a,b\in \wedge V:\; a\wedge b=-(b\wedge a).$$
+	так как
+	$$(a+b)\wedge(a+b)=a\wedge a+a\wedge b+b\wedge a+b\wedge b
+	=0+a\wedge b+b\wedge a+0,$$
+	а значит
+	$$a\wedge b+b\wedge a=0.$$
+	$k$-й внешней степенью $V$ будем называть пространство $V^{\otimes k}$
+	спроецированное на $\wedge V$,
+	обозначается $\wedge^k V$,
+	то есть пространство произведений последовательностей из $k$ векторов из $V$.
 	\section{Базис внешней степени. Подсчет размерности внешней степени.}
+	мы уже знаем, что
+	$$
+	V^{\otimes k}=\left\{ \bigoplus\limits_{j=1}^k e_{i_j}:~i\in \left(\mathbb{Z}\cap[1;n]\right)^k \right\},
+	$$
+	где $e_1,e_2,...,e_n$ это базис $V$.
+	
+	тогда если факторизовать $V^{\otimes k}$ по $I$
+	то уже знаем, что получатся все те же произведения,
+	но без порядка множителей, ведь из одного порядка
+	можно перейти в другой, если домножить на $-1$
+	и переставить два соседних элемента по антикоммутативности
+	внешнего произведения.
+	
+	тогда чтобы построить базис,
+	надо выбрать по представителю из всех классов эквивалентности последовательностей
+	из $k$ элементов из $n$ элементов базиса $V$, где нет повторяющихся,
+	и где две последовательности считаются эквивалентными, если
+	они совпадут при перестановке элементов.
+	количество таких элементов это по определению $C_n^k$.
+	
+	тогда чтобы построить пример базиса,
+	например упорядочим все последовательности определённым образом:
+	например индексы элементов $e_i$ будут неубывающими,
+	но так как мы выкинули все последовательности с повторяющимися
+	элементами, то $i$ станут строго возрастать.
+	тогда базисом можно выбрать такое множество:
+	$$
+	\left\{ \bigwedge\limits_{j=1}^k e_{i_j} :
+	i\in (\mathbb{Z}\cap[1;n])^k,\ 
+	\forall j\in \mathbb{Z}\cap[1;k-1]: i_j<i_{j+1}
+	\right\}.
+	$$
 	\section{ Индуцированные гомоморфизмы на тензорной и внешней алгебрах. Определитель. Мультипликативность определителя.}
+	пусть дано линейное отображение $\mathcal{L}:~V\mapsto W$,
+	тогда определим $k$-ю тензорную степень отображения $\mathcal{L}$ как:
+	
+	$$
+	\mathcal{L}^{\otimes k}:~V^{\otimes k}\mapsto W^{\otimes k}
+	$$
+	
+	такое что
+	
+	$$
+	\forall i \in (\mathbb{Z}\cap[1;n])^k:\ 
+	\mathcal{L}^{\otimes k}\left(\bigotimes\limits_{j=1}^k e_{i_j}\right)
+	=
+	\bigotimes\limits_{j=1}^k \mathcal{L}(e_{i_j}).
+	$$
+	
+	на остальные вектора из $V^{\otimes k}$ значения продолжатся по линейности.
+	
+	аналогично $k$-я внешняя степень отображения $\mathcal{L}$ это:
+	
+	$$
+	\mathcal{L}^{\wedge k}:~V^{\wedge k}\mapsto W^{\wedge k}
+	$$
+	
+	такое что
+	
+	$$
+	\forall i\in (\mathbb{Z}\cap[1;n])^k:\ 
+	\mathcal{L}^{\wedge k}\left( \bigwedge\limits_{j=1}^k e_{i_j} \right)
+	=
+	\bigwedge\limits_{j=1}^k \mathcal{L}(e_{i_j}).
+	$$
+	
+	на остальные вектора из $V^{\wedge k}$ значения продолжатся по линейности.
+	
+	пусть дан оператор $\mathcal{L}:~V\mapsto V$, где $V$ это векторное пространство размерности $n$.
+	тогда определителем оператора $\mathcal{L}$ называют $\mathcal{L}^{\wedge n}$.
+	
+	заметим, что это константа, так как $\dim V^{\wedge n}=C_n^n=1$,
+	то есть определитель принимает одномерный вектор вида
+	$\alpha\bigwedge\limits_{i=1}^n e_i$
+	и возвращает
+	$\beta\alpha\bigwedge\limits_{i=1}^n e_i$,
+	то есть по сути эта константа $\beta$ и определяет определитель,
+	обозначается $\det \mathcal{L}$.
+	
+	докажем мультипликативность определителя, а именно:
+	пусть дано пространство $V$, тогда
+	$$
+	\forall \mathcal{L},\mathcal{T}\in \operatorname{End}(V):\ 
+	\det(\mathcal{L}\circ\mathcal{T})=\det(\mathcal{L})\cdot \det(\mathcal{T}).
+	$$
+	
+	для этого просто раскроем внешнюю степень,
+	то есть докажем, что
+	$$
+	(\mathcal{L}\circ\mathcal{T})^{\wedge n}
+	=
+	\mathcal{L}^{\wedge n}\circ\mathcal{T}^{\wedge n}.
+	$$
+	
+	раскроем внешние произведения из определений,
+	и покажем, что это одна и та же запись:
+	
+	$$
+	\mathcal{T}^{\wedge n}\left(\bigwedge\limits_{i=1}^n e_i\right)
+	=
+	\bigwedge\limits_{i=1}^n \mathcal{T}(e_i),
+	$$
+	
+	$$
+	\mathcal{L}^{\wedge n}\left(\bigwedge\limits_{i=1}^n \mathcal{T}(e_i)\right)
+	=
+	\bigwedge\limits_{i=1}^n \mathcal{L}(\mathcal{T}(e_i))
+	=
+	(\mathcal{L}\circ \mathcal{T})^{\wedge n}\left( \bigwedge\limits_{i=1}^n e_i \right).
+	$$
 	\section{Изоморфизм \texorpdfstring{$V \overset{\sim}{=}\left(\wedge^{n-1}V\right)^*$}{V = (wedge^n-1V)}}
+	изоморфность доказывается тривиально:
+	пусть $\dim V=n$, тогда
+	$\dim\wedge^{n-1}V=\dim\left(\wedge^{n-1}V\right)^*=C_n^{n-1}=n$.
+	
+	но важен определённый изоморфизм:
+	
+	пусть $V$ определено над полем $k$, тогда
+	формой объёма называют $\omega:~V^{\wedge n}\mapsto k$,
+	это $\omega\in (V^{\wedge n})^*$ такое что:
+	
+	$$
+	\omega\left( \bigwedge\limits_{i=1}^n e_i\right)=1.
+	$$
+	
+	заметим, что такое $\omega$ просто равно константе при
+	произведении последовательности всех векторов из базиса.
+	
+	определим $F:V\mapsto (V^{\wedge n-1})^*$ такое что
+	$$
+	\forall v\in V:\ \forall u \in V^{\wedge n-1}:\ 
+	F_v(u)=\omega(v\wedge u).
+	$$
+	
+	заметим, что $F$ линейно, так как выполняется
+	дистрибутивность при раскрытии $\wedge$.
+	
+	и $F$ изоморфизм, так как биекция, потому что инъективный
+	гомоморфизм в конечномерном пространстве.
 	\section{ Критерий обратимости оператора в терминах определителя. Построение обратного оператора с помощью изоморфизма \texorpdfstring{$V \overset{\sim}{=}\left(\wedge^{n-1}V\right)^*$}{V = (wedge^n-1V)}.}
+	определим $\mathcal{L}^{\vee}:~V\mapsto V$ единственным образом
+	таким способом:
+	
+	$$
+	\forall v \in V:\ \forall u \in V^{\wedge n-1}:\ 
+	\omega(v\wedge\mathcal{L}^{\wedge n-1}(u))
+	=
+	\omega(\mathcal{L}^{\vee}(v)\wedge u).
+	$$
+	
+	докажем, что $(\det \mathcal{L}\ne 0) \Leftrightarrow (\exists \mathcal{L}^{-1})$.
+	
+	справа налево:
+	
+	с одной стороны
+	$$
+	\det (\mathcal{L}\circ\mathcal{L}^{-1})=\det(\operatorname{id}_V)=1,
+	$$
+	с другой стороны
+	$$
+	\det (\mathcal{L}\circ\mathcal{L}^{-1})
+	=
+	\det(\mathcal{L})\cdot\det(\mathcal{L}^{-1}).
+	$$
+	тогда получается, что
+	$$
+	1=\det(\mathcal{L})\cdot \det(\mathcal{L}^{-1}),
+	$$
+	так что $\det \mathcal{L}$ не могло быть нулём.
+	
+	слева направо:
+	
+	построим  
+	$$
+	\mathcal{L}^{-1}=\frac{1}{\det\mathcal{L}}\cdot \mathcal{L}^{\vee}.
+	$$
+	
+	конструктивно показали, что $\exists \mathcal{L}^{-1}$.
+	
 	\section{ Модуль над кольцом; определение конечнопорожденного и свободного модуля. Построение копредставления для конечно-порожденного модуля.}
 	\section{Нормальная форма Смита для матриц над областью главных идеалов.}
 	\section{Теорема о структуре конечно-порожденного модуля над ОГИ.}
@@ -1001,7 +1355,7 @@ citecolor=black
 		\item [Ассоциированные элементы] Элементы кольца $a \ne 0$, $b \ne 0$, такие что $a\ \vert\ b$ и $b\ \vert\ a$.
 		\item [Евклидова область] Область целостности в котором сущесвует функция нормы $N : R \setminus \{0\} \rightarrow \mathbb{N}_0$, такая что:
 		\begin{itemize}
-			\item $N(a \cdot b) \ge N(a)$ (и $N(a \cdot b) = N(b)$ если $b \in R^{\times}$)
+			\item $N(a \cdot b) \ge N(a)$ (и $N(a \cdot b) = N(a)$ если $b \in R^{\times}$)
 			\item Можно делить с остатком, уменьшая норму: $\forall a, b \ne 0 \in R : \exists q, r \in R : a = q \cdot b + r \land (N(r) < N(b) \lor r = 0)$.
 		\end{itemize}
 		\item [Наибольший общий делитель] Для двух элементов кольца $a, b \in R$, максимальный по норме элемент $g \in R$, такой что $g\ \vert\ a$, $g\ \vert\ b$.
@@ -1050,8 +1404,8 @@ citecolor=black
 		\item [Символ Лежандра] Фукнция $\left(\frac{a}{p}\right)$, которая показывает, является ли $a$ квадратичным вычетом по модулю $p$. \\
 		$$
 		\left(\frac{a}{p}\right) = \begin{cases}
-			1,  & a \text{кв. вычет} \mod p \\
-			-1, & a \text{не кв. вычет} \mod p \\
+			1,  & a\ \text{-- кв. вычет mod $p$} \\
+			-1, & \text{иначе} \\
 		\end{cases}
 		$$
 		\item [Поле комплексных чисел] Поле $\mathbb{C} = \mathbb{R}[i] / (i^2 + 1)$ -- дополнение действительных чисел, в котором $i^2 = -1$.
@@ -1066,8 +1420,9 @@ citecolor=black
 			\item $1 \cdot v = v$
 		\end{itemize}
 		\item [Линейная независимость] Векторы $v_1$ и $v_2$ линейно независимы, если не существует таких $a$ и $b$, что $a v_1 + b v_2 = \vec{0}$.
-		\item [Базис векторного пространства] Два эквивалентных определения:
+		\item [Базис векторного пространства] Три эквивалентных определения:
 		\begin{itemize}
+			\item Линейно независимое порождающее множество
 			\item Максимальное по включению множество независимых векторов
 			\item Минимальное по включение порождающее множество
 		\end{itemize}
@@ -1127,7 +1482,7 @@ citecolor=black
 		\item [Внешнаяя степень]
 		\item [Внешнаяя алгебра]
 		\item [Определитель]
-		\item [Модуль] Над кольцом $R$, абелева группа $M$ с отображением $\cdot : R \times M \rightarrow R$ и
+		\item [Модуль] Над кольцом $R$, абелева группа $M$ с отображением $\cdot : R \times M \rightarrow M$ и
 		\begin{itemize}
 			\item $\forall r_1, r_2 \in R, m \in M : (r_1 + r_2) \cdot m = r_1 \cdot m + r_2 \cdot m$
 			\item $\forall r \in R, m_1, m_2 \in M : r \cdot (m_1 + m_2) = r \cdot m_1 + r \cdot m_2$
@@ -1151,7 +1506,6 @@ citecolor=black
 		$$
 		\item [Нильпотентный оператор] Оператор, если применить который $n$ раз подряд, он станет отправлять всё в $\vec{0}$.
 		\item [Жорданова клетка] Компонент нормальной формы, матрица вида:
-		% тут можно получше сделать матрицу наверное
 		$$
 		\begin{pmatrix}
 			\lambda &         &         & \dots   &        & 0       \\
